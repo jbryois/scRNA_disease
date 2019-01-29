@@ -290,14 +290,14 @@ write_tsv(dic_lvl5,&quot;../../Data/Sten Whole Brain 10xGenomics 2018/dictionary
 <h3>Get summary stats on the dataset</h3>
 <pre class="r"><code>sumstats_lvl5 &lt;- exp_lvl5 %&gt;% 
   group_by(Lvl5) %&gt;%
-  summarise(mean_umi=sum(Expr_sum_mean),
+  summarise(mean_UMI=sum(Expr_sum_mean),
             Ngenes=sum(Expr_sum_mean&gt;0))
 
 cell_types_arranged &lt;- cell_types %&gt;% 
   group_by(Lvl5) %&gt;% 
   summarise(NCells=sum(NCells)) 
 
-sumstats_lvl5 &lt;- inner_join(sumstats_lvl5,cell_types_arranged) %&gt;% mutate(total_UMI=mean_umi*NCells)</code></pre>
+sumstats_lvl5 &lt;- inner_join(sumstats_lvl5,cell_types_arranged) %&gt;% mutate(total_UMI=mean_UMI*NCells)</code></pre>
 </div>
 </div>
 <div id="qc" class="section level1">

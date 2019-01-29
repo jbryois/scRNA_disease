@@ -104,14 +104,14 @@ write_tsv(dic_lvl5,"../../Data/Sten Whole Brain 10xGenomics 2018/dictionary_cell
 ```r
 sumstats_lvl5 <- exp_lvl5 %>% 
   group_by(Lvl5) %>%
-  summarise(mean_umi=sum(Expr_sum_mean),
+  summarise(mean_UMI=sum(Expr_sum_mean),
             Ngenes=sum(Expr_sum_mean>0))
 
 cell_types_arranged <- cell_types %>% 
   group_by(Lvl5) %>% 
   summarise(NCells=sum(NCells)) 
 
-sumstats_lvl5 <- inner_join(sumstats_lvl5,cell_types_arranged) %>% mutate(total_UMI=mean_umi*NCells)
+sumstats_lvl5 <- inner_join(sumstats_lvl5,cell_types_arranged) %>% mutate(total_UMI=mean_UMI*NCells)
 ```
 
 # QC
