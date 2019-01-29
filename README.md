@@ -1,4 +1,4 @@
-# Code used for our paper
+# Code
 
 !!!Under construction!!!
 
