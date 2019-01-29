@@ -50,7 +50,8 @@ Filtered to remove extended MHC (chr6, 25Mb to 34Mb).
 
 ```r
 gene_coordinates <- 
-  read_tsv("../../Data/NCBI/NCBI37.3.gene.loc.extendedMHCexcluded",col_names = FALSE,col_types = 'cciicc') %>%
+  read_tsv("../../Data/NCBI/NCBI37.3.gene.loc.extendedMHCexcluded",
+           col_names = FALSE,col_types = 'cciicc') %>%
   mutate(start=ifelse(X3-100000<0,0,X3-100000),end=X4+100000) %>%
   select(X2,start,end,1) %>% 
   rename(chr="X2", ENTREZ="X1") %>% 
@@ -85,7 +86,7 @@ cell_types <- cbind(column=as.character(paste0("V",1:265)),
                     as.tibble() %>%
                     mutate(NCells=as.numeric(NCells))
 
-exp_lvl5 <- inner_join(exp,cell_types,by="column") %>% as.tibble() %>% ungroup() %>% rename(Expr_sum_mean=Expr)
+exp_lvl5 <- inner_join(exp,cell_types,by="column") %>% ungroup() %>% rename(Expr_sum_mean=Expr)
 ```
 
 ### Write dictonary for cell type names
@@ -111,7 +112,8 @@ cell_types_arranged <- cell_types %>%
   group_by(Lvl5) %>% 
   summarise(NCells=sum(NCells)) 
 
-sumstats_lvl5 <- inner_join(sumstats_lvl5,cell_types_arranged) %>% mutate(total_UMI=mean_UMI*NCells)
+sumstats_lvl5 <- inner_join(sumstats_lvl5,cell_types_arranged) %>% 
+  mutate(total_UMI=mean_UMI*NCells)
 ```
 
 # QC
@@ -206,7 +208,8 @@ return(df)
 
 ```r
 ldsc_bedfile <- function(d,Cell_type, outputfile_name){
-  d_spe <- d %>% inner_join(gene_coordinates,by="ENTREZ") %>% group_by_(Cell_type) %>% filter(specificity>=quantile(specificity,0.9)) 
+  d_spe <- d %>% inner_join(gene_coordinates,by="ENTREZ") %>% 
+    group_by_(Cell_type) %>% filter(specificity>=quantile(specificity,0.9)) 
   d_spe %>% do(write_group(.,Cell_type,outputfile_name))
 }
 ```
