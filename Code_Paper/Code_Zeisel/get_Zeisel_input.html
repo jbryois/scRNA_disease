@@ -249,7 +249,8 @@ exp$Gene &lt;- h5f$row_attrs$Gene</code></pre>
 <p>File downloaded from MAGMA website (<a href="https://ctg.cncr.nl/software/magma" class="uri">https://ctg.cncr.nl/software/magma</a>).</p>
 <p>Filtered to remove extended MHC (chr6, 25Mb to 34Mb).</p>
 <pre class="r"><code>gene_coordinates &lt;- 
-  read_tsv(&quot;../../Data/NCBI/NCBI37.3.gene.loc.extendedMHCexcluded&quot;,col_names = FALSE,col_types = 'cciicc') %&gt;%
+  read_tsv(&quot;../../Data/NCBI/NCBI37.3.gene.loc.extendedMHCexcluded&quot;,
+           col_names = FALSE,col_types = 'cciicc') %&gt;%
   mutate(start=ifelse(X3-100000&lt;0,0,X3-100000),end=X4+100000) %&gt;%
   select(X2,start,end,1) %&gt;% 
   rename(chr=&quot;X2&quot;, ENTREZ=&quot;X1&quot;) %&gt;% 
@@ -278,7 +279,7 @@ exp$Gene &lt;- h5f$row_attrs$Gene</code></pre>
                     as.tibble() %&gt;%
                     mutate(NCells=as.numeric(NCells))
 
-exp_lvl5 &lt;- inner_join(exp,cell_types,by=&quot;column&quot;) %&gt;% as.tibble() %&gt;% ungroup() %&gt;% rename(Expr_sum_mean=Expr)</code></pre>
+exp_lvl5 &lt;- inner_join(exp,cell_types,by=&quot;column&quot;) %&gt;% ungroup() %&gt;% rename(Expr_sum_mean=Expr)</code></pre>
 </div>
 <div id="write-dictonary-for-cell-type-names" class="section level3">
 <h3>Write dictonary for cell type names</h3>
@@ -297,7 +298,8 @@ cell_types_arranged &lt;- cell_types %&gt;%
   group_by(Lvl5) %&gt;% 
   summarise(NCells=sum(NCells)) 
 
-sumstats_lvl5 &lt;- inner_join(sumstats_lvl5,cell_types_arranged) %&gt;% mutate(total_UMI=mean_UMI*NCells)</code></pre>
+sumstats_lvl5 &lt;- inner_join(sumstats_lvl5,cell_types_arranged) %&gt;% 
+  mutate(total_UMI=mean_UMI*NCells)</code></pre>
 </div>
 </div>
 <div id="qc" class="section level1">
@@ -364,7 +366,8 @@ exp_lvl5 &lt;- filter(exp_lvl5,!Gene%in%not_expressed$Gene)</code></pre>
 return(df)
 }</code></pre>
 <pre class="r"><code>ldsc_bedfile &lt;- function(d,Cell_type, outputfile_name){
-  d_spe &lt;- d %&gt;% inner_join(gene_coordinates,by=&quot;ENTREZ&quot;) %&gt;% group_by_(Cell_type) %&gt;% filter(specificity&gt;=quantile(specificity,0.9)) 
+  d_spe &lt;- d %&gt;% inner_join(gene_coordinates,by=&quot;ENTREZ&quot;) %&gt;% 
+    group_by_(Cell_type) %&gt;% filter(specificity&gt;=quantile(specificity,0.9)) 
   d_spe %&gt;% do(write_group(.,Cell_type,outputfile_name))
 }</code></pre>
 </div>
