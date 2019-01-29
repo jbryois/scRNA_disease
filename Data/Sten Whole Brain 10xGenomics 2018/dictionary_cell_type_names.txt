@@ -1,0 +1,266 @@
+Lvl1	Lvl2	Lvl3	Lvl4	Lvl5	Description
+Neurons	PNS neurons	Enteric neurons	Enteric neurons	ENT9	Cholinergic enteric neurons
+Neurons	PNS neurons	Enteric neurons	Enteric neurons	ENT8	Cholinergic enteric neurons, VGLUT2
+Neurons	PNS neurons	Enteric neurons	Enteric neurons	ENT6	Cholinergic enteric neurons
+Neurons	PNS neurons	Enteric neurons	Enteric neurons	ENT5	Cholinergic enteric neurons
+Neurons	PNS neurons	Enteric neurons	Enteric neurons	ENT4	Cholinergic enteric neurons
+Neurons	PNS neurons	Enteric neurons	Enteric neurons	ENT7	Cholinergic enteric neurons, VGLUT2
+Neurons	PNS neurons	Enteric neurons	Enteric neurons	ENT3	Nitrergic enteric neurons
+Neurons	PNS neurons	Enteric neurons	Enteric neurons	ENT2	Nitrergic enteric neurons
+Neurons	PNS neurons	Enteric neurons	Enteric neurons	ENT1	Nitrergic enteric neurons
+Glia	Neural crest-like glia	Neural crest-like glia	Enteric glia	ENTG1	Enteric glia, proliferating
+Glia	Neural crest-like glia	Neural crest-like glia	Enteric glia	ENTG4	Enteric glia
+Glia	Neural crest-like glia	Neural crest-like glia	Enteric glia	ENTG2	Enteric glia
+Glia	Neural crest-like glia	Neural crest-like glia	Enteric glia	ENTG3	Enteric glia
+Glia	Neural crest-like glia	Neural crest-like glia	Enteric glia	ENTG6	Enteric glia
+Glia	Neural crest-like glia	Neural crest-like glia	Enteric glia	ENTG5	Enteric glia
+Glia	Neural crest-like glia	Neural crest-like glia	Enteric glia	ENTG7	Enteric glia
+Glia	Neural crest-like glia	Neural crest-like glia	Enteric glia	ENMFB	Enteric mesothelial fibroblasts
+Glia	CNS glia	Oligodendrocytes	Oligodendrocytes	MOL3	Mature oligodendrocytes, spinal cord enriched (high Klk6)
+Glia	CNS glia	Oligodendrocytes	Oligodendrocytes	MOL2	Mature oligodendrocytes, hindbrain
+Glia	CNS glia	Oligodendrocytes	Oligodendrocytes	MFOL1	Myelin forming oligodendrocytes (MFOL)
+Glia	CNS glia	Oligodendrocytes	Oligodendrocytes	MOL1	Mature oligodendrocytes
+Glia	CNS glia	Oligodendrocytes	Oligodendrocytes	MFOL2	Myelin forming oligodendrocytes (MFOL)
+Glia	CNS glia	Oligodendrocytes	Oligodendrocytes	NFOL1	Newly formed oligodendrocytes (NFOL)
+Glia	CNS glia	Oligodendrocytes	Oligodendrocytes	NFOL2	Newly formed oligodendrocytes (NFOL), pons/medulla specific
+Glia	CNS glia	Oligodendrocytes	Oligodendrocytes	COP2	Committed oligodendrocytes cells (COP), pons/medulla specific
+Glia	CNS glia	Oligodendrocytes	Oligodendrocytes	COP1	Committed oligodendrocytes cells (COP)
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Cholinergic and monoaminergic neurons	HBSER2	Serotonergic neurons, hindbrain
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Cholinergic and monoaminergic neurons	HBSER1	Serotonergic neurons, hindbrain
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Cholinergic and monoaminergic neurons	HBSER3	Serotonergic neurons, hindbrain
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Cholinergic and monoaminergic neurons	HBSER4	Serotonergic neurons, hindbrain
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Cholinergic and monoaminergic neurons	HBSER5	Serotonergic neurons, hindbrain
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting excitatory neurons	TEGLU15	Excitatory neurons, cerebral cortex
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting excitatory neurons	TEGLU16	Excitatory neurons, cerebral cortex
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting excitatory neurons	TEGLU5	Excitatory neurons, cerebral cortex
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting excitatory neurons	TEGLU4	Excitatory neurons, cerebral cortex
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting excitatory neurons	TEGLU22	Excitatory neurons, amygdala
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting excitatory neurons	TEGLU23	Excitatory neurons, hippocampus CA3
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting excitatory neurons	TEGLU24	Excitatory neurons, hippocampus CA1
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting excitatory neurons	TEGLU17	Excitatory neurons, cerebral cortex
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting excitatory neurons	TEGLU18	Excitatory neurons, cerebral cortex
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting excitatory neurons	TEGLU19	Excitatory neurons, cerebral cortex
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting excitatory neurons	TEGLU2	Excitatory neurons, cerebral cortex
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting excitatory neurons	TEGLU3	Excitatory neurons, cerebral cortex
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting excitatory neurons	TEGLU14	Excitatory neurons, cerebral cortex
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting excitatory neurons	TEGLU13	Excitatory neurons, cerebral cortex
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting excitatory neurons	TEGLU21	Excitatory neurons, hippocampus CA1
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting excitatory neurons	TEGLU10	Excitatory neurons, cerebral cortex
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting excitatory neurons	TEGLU11	Excitatory neurons, cerebral cortex
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting excitatory neurons	TEGLU20	Excitatory neurons, cerebral cortex
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting excitatory neurons	TEGLU12	Excitatory neurons, cerebral cortex
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting excitatory neurons	TEGLU9	Excitatory neurons, cerebral cortex
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting excitatory neurons	TEGLU8	Excitatory neurons, cerebral cortex
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting excitatory neurons	TEGLU7	Excitatory neurons, cerebral cortex
+Neurons	CNS neurons	Telencephalon interneurons	Telencephalon inhibitory interneurons	TEINH10	R-LM border Cck interneurons, cortex/hippocampus
+Neurons	CNS neurons	Telencephalon interneurons	Telencephalon inhibitory interneurons	TEINH11	R-LM border Cck interneurons, cortex/hippocampus
+Neurons	CNS neurons	Telencephalon interneurons	Telencephalon inhibitory interneurons	TEINH12	Non-border Cck interneurons, cortex/hippocampus
+Neurons	CNS neurons	Telencephalon interneurons	Telencephalon inhibitory interneurons	TEINH9	Non-border Cck interneurons, hippocampus
+Neurons	CNS neurons	Telencephalon interneurons	Olfactory inhibitory neurons	OBINH5	External plexiform layer interneuron, olfactory bulb
+Neurons	CNS neurons	Telencephalon interneurons	Telencephalon inhibitory interneurons	TEINH5	Interneuron-selective interneurons, cortex/hippocampus
+Neurons	CNS neurons	Telencephalon interneurons	Telencephalon inhibitory interneurons	TEINH6	Interneuron-selective interneurons, cortex/hippocampus
+Neurons	CNS neurons	Telencephalon interneurons	Telencephalon inhibitory interneurons	TEINH7	Interneuron-selective interneurons, hippocampus
+Neurons	CNS neurons	Telencephalon interneurons	Telencephalon inhibitory interneurons	TEINH8	Interneuron-selective interneurons, hippocampus
+Neurons	CNS neurons	Telencephalon interneurons	Telencephalon inhibitory interneurons	TEINH4	Interneuron-selective interneurons, cortex/hippocampus
+Neurons	CNS neurons	Telencephalon interneurons	Telencephalon inhibitory interneurons	TEINH20	Inhibitory interneurons, hippocampus
+Neurons	CNS neurons	Telencephalon interneurons	Telencephalon inhibitory interneurons	TEINH13	Trilaminar cells, hippocampus
+Neurons	CNS neurons	Telencephalon interneurons	Telencephalon inhibitory interneurons	TEINH14	CGE-derived neurogliaform cells Cxcl14+, cortex/hippocampus
+Neurons	CNS neurons	Telencephalon interneurons	Telencephalon inhibitory interneurons	TEINH16	Ivy and MGE-derived neurogliaform cells, cortex/hippocampus
+Neurons	CNS neurons	Telencephalon interneurons	Telencephalon inhibitory interneurons	TEINH15	CGE-derived neurogliaform cells, cortex/hippocampus
+Neurons	CNS neurons	Telencephalon interneurons	Telencephalon inhibitory interneurons	TEINH19	Hippocamposeptal projection, cortex/hippocampus
+Neurons	CNS neurons	Telencephalon interneurons	Telencephalon inhibitory interneurons	TEINH21	Sleep-active, long-range projection interneurons, cortex/hippocampus
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Cholinergic and monoaminergic neurons	HYPEP7	Pmch neurons, hypothalamus
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Cholinergic and monoaminergic neurons	HYPEP6	Orexin-producing neurons, hypothalamus
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Peptidergic neurons	DEINH8	Inhibitory neurons, hypothalamus
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Cholinergic and monoaminergic neurons	MBDOP1	Dopaminergic neurons, periaqueductal grey
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Cholinergic and monoaminergic neurons	MBDOP2	Dopaminergic neurons, ventral midbrain (SNc, VTA)
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Cholinergic and monoaminergic neurons	MEGLU14	Glutamatergic projection neurons of the raphe nucleus
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon excitatory neurons	MEGLU11	Excitatory neurons, midbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon excitatory neurons	MEGLU10	Excitatory neurons, midbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon excitatory neurons	MEGLU9	Excitatory neurons, midbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon excitatory neurons	MEGLU8	Excitatory neurons, midbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon excitatory neurons	MEGLU7	Excitatory neurons, midbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon excitatory neurons	MEGLU6	Excitatory neurons, midbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon excitatory neurons	DEGLU5	Excitatory neurons, midbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon excitatory neurons	MEGLU2	Excitatory neurons, midbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon excitatory neurons	MEGLU3	Excitatory neurons, midbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon excitatory neurons	MEGLU1	Excitatory neurons, midbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon excitatory neurons	MEGLU5	Excitatory neurons, midbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon excitatory neurons	MEGLU4	Excitatory neurons, midbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon excitatory neurons	DEGLU4	Excitatory neurons, thalamus
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon excitatory neurons	DEGLU3	Excitatory neurons, thalamus
+Neurons	CNS neurons	Immature neural	Glutamatergic neuroblasts	OBNBL1	Neuroblasts, olfactory
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon excitatory neurons	MBCHO1	Cholinergic neurons, midbrain red nucleus
+Neurons	CNS neurons	Hindbrain neurons	Hindbrain neurons	HBGLU9	Excitatory neurons, hindbrain
+Neurons	CNS neurons	Spinal cord neurons	Spinal cord excitatory neurons	SCGLU1	Excitatory neurons, spinal cord
+Neurons	CNS neurons	Spinal cord neurons	Spinal cord excitatory neurons	HBGLU10	Excitatory neurons, hindbrain
+Neurons	CNS neurons	Spinal cord neurons	Spinal cord excitatory neurons	SCGLU10	Excitatory neurons, spinal cord
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon excitatory neurons	HBGLU2	Excitatory neurons, hindbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon excitatory neurons	HBGLU3	Excitatory neurons, hindbrain
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Cholinergic and monoaminergic neurons	HBNOR	Noradrenergic neurons of the medulla
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon excitatory neurons	HBGLU1	Excitatory neurons, hindbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon excitatory neurons	DEGLU2	Excitatory neurons, hypothalamus
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon excitatory neurons	DEGLU1	Excitatory neurons, thalamus
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting inhibitory neurons	MSN1	D1 medium spiny neurons, striatum
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting inhibitory neurons	MSN2	D2 medium spiny neurons, striatum
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting inhibitory neurons	MSN3	D2 medium spiny neurons, striatum
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting inhibitory neurons	MSN5	Patch D1/D2 neurons, striatum
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting inhibitory neurons	MSN4	D1 medium spiny neurons, striatum
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting inhibitory neurons	MSN6	Matrix D1 neurons, striatum
+Glia	Neural crest-like glia	Neural crest-like glia	Olfactory ensheathing cells	OEC	Olfactory ensheathing cells
+Neurons	CNS neurons	Immature neural	Non-glutamatergic neuroblasts	DETPH	Neuroblast-like, habenula
+Glia	CNS glia	Astroependymal cells	Dentate gyrus radial glia-like cells	RGDG	Dentate gyrus radial glia-like cells
+Glia	CNS glia	Astroependymal cells	Subventricular zone radial glia-like cells	RGSZ	Subventricular zone radial glia-like cells
+Glia	Neural crest-like glia	Neural crest-like glia	Oligodendrocyte precursor cells	OPC	Oligodendrocytes precursor cells
+Neurons	CNS neurons	Immature neural	Non-glutamatergic neuroblasts	SZNBL	Neuronal intermidate progenitor cells
+Glia	CNS glia	Astroependymal cells	Ependymal cells	EPMB	Ependymal cells, midbrain
+Glia	CNS glia	Astroependymal cells	Subcommissural organ hypendymal cells	HYPEN	Hypendymal cell, subcommissural organ
+Neurons	CNS neurons	Telencephalon interneurons	Olfactory inhibitory neurons	OBDOP2	Dopaminergic neurons, olfactory nulb
+Neurons	CNS neurons	Telencephalon interneurons	Olfactory inhibitory neurons	OBINH2	Inner horizontal cell, olfactory bulb
+Neurons	CNS neurons	Telencephalon interneurons	Olfactory inhibitory neurons	OBINH3	Inhibitory neurons, olfactory bulb
+Neurons	CNS neurons	Telencephalon interneurons	Olfactory inhibitory neurons	OBINH1	Inhibitory neurons, olfactory bulb
+Neurons	CNS neurons	Telencephalon interneurons	Olfactory inhibitory neurons	OBINH4	Inhibitory neurons, olfactory bulb
+Neurons	CNS neurons	Immature neural	Glutamatergic neuroblasts	OBNBL2	Neuroblasts, olfactory bulb
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting excitatory neurons	TEGLU6	Excitatory neurons, cerebral cortex
+Neurons	CNS neurons	Telencephalon projecting neurons	Telencephalon projecting excitatory neurons	TEGLU1	Excitatory neurons, cerebral cortex
+Neurons	CNS neurons	Telencephalon projecting neurons	Dentate gyrus granule neurons	DGGRC2	Granule neurons, dentate gyrus
+Neurons	CNS neurons	Telencephalon projecting neurons	Dentate gyrus granule neurons	DGGRC1	Granule neuroblasts, dentate gyrus
+Neurons	CNS neurons	Immature neural	Non-glutamatergic neuroblasts	DGNBL1	Granule neuroblasts, dentate gyrus
+Neurons	CNS neurons	Immature neural	Non-glutamatergic neuroblasts	DGNBL2	Granule neuroblasts, dentate gyrus
+Neurons	CNS neurons	Immature neural	Non-glutamatergic neuroblasts	OBNBL3	Neuroblasts, olfactory bulb
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Peptidergic neurons	HYPEP3	Peptidergic neurons, hypothalamus
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Peptidergic neurons	HYPEP2	Peptidergic neurons, hypothalamus
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Peptidergic neurons	HYPEP1	Peptidergic neurons, hypothalamus
+Neurons	CNS neurons	Cerebellum neurons	Cerebellum neurons	CBNBL2	Neuroblasts, cerebellum
+Neurons	CNS neurons	Cerebellum neurons	Cerebellum neurons	CBGRC	Granule neurons, cerebellum
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon excitatory neurons	CR	Cajal-Retzius cells, hippocampus
+Neurons	CNS neurons	Immature neural	Glutamatergic neuroblasts	CBNBL1	Neuroblasts, cerebellum
+Neurons	CNS neurons	Immature neural	Glutamatergic neuroblasts	SEPNBL	Neuroblasts, septum
+Neurons	CNS neurons	Telencephalon interneurons	Olfactory inhibitory neurons	OBNBL5	Inhibitory neurons, olfactory bulb
+Neurons	CNS neurons	Telencephalon interneurons	Olfactory inhibitory neurons	OBNBL4	Inhibitory neurons, olfactory bulb
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon excitatory neurons	DECHO2	Cholinergic neurons, habenula
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Peptidergic neurons	HYPEP5	Vasopressin-producing cells, hypothalamus
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Peptidergic neurons	DEINH7	Inhibitory neurons, hypothalamus
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Peptidergic neurons	HYPEP4	Oxytocin-producing cells, hypothalamus
+Neurons	CNS neurons	Hindbrain neurons	Hindbrain neurons	HBGLU8	Excitatory neurons, hindbrain
+Neurons	CNS neurons	Hindbrain neurons	Hindbrain neurons	HBGLU6	Excitatory neurons, hindbrain
+Neurons	CNS neurons	Hindbrain neurons	Hindbrain neurons	HBGLU7	Excitatory neurons, hindbrain
+Neurons	CNS neurons	Hindbrain neurons	Hindbrain neurons	HBGLU5	Excitatory neurons, hindbrain
+Neurons	CNS neurons	Hindbrain neurons	Hindbrain neurons	HBGLU4	Excitatory neurons, hindbrain
+Neurons	CNS neurons	Hindbrain neurons	Hindbrain neurons	HBCHO2	Cholinergic neurons, hindbrain
+Neurons	CNS neurons	Hindbrain neurons	Hindbrain neurons	HBCHO1	Cholinergic neurons, hindbrain
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Cholinergic and monoaminergic neurons	HBCHO3	Afferent nuclei of cranial nerves VI-XII
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Cholinergic and monoaminergic neurons	HBADR	Adrenergic cell groups of the medulla
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Cholinergic and monoaminergic neurons	HBCHO4	Afferent nuclei of cranial nerves III-V
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Cholinergic and monoaminergic neurons	TECHO	Cholinergic interneurons, telencephalon
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Cholinergic and monoaminergic neurons	DECHO1	Cholinergic neurons, septal nucleus, Meissnert and diagonal band
+Neurons	CNS neurons	Hindbrain neurons	Hindbrain neurons	SCINH1	Inhibitory neurons, spinal cord
+Neurons	CNS neurons	Hindbrain neurons	Hindbrain neurons	HBINH8	Inhibitory neurons, hindbrain
+Neurons	CNS neurons	Hindbrain neurons	Hindbrain neurons	HBINH7	Inhibitory neurons, hindbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon inhibitory neurons	HBINH5	Inhibitory neurons, hindbrain
+Neurons	CNS neurons	Cerebellum neurons	Cerebellum neurons	CBINH2	Granular layer interneurons, cerebellum
+Neurons	CNS neurons	Cerebellum neurons	Cerebellum neurons	CBPC	Purkinje cells
+Neurons	CNS neurons	Cerebellum neurons	Cerebellum neurons	CBINH1	Molecular layer interneurons, cerebellum
+Neurons	CNS neurons	Cerebellum neurons	Cerebellum neurons	MEINH1	Inhibitory neurons, midbrain
+Neurons	CNS neurons	Telencephalon interneurons	Telencephalon inhibitory interneurons	TEINH17	Axo-axonic, cortex/hippocampus
+Neurons	CNS neurons	Telencephalon interneurons	Telencephalon inhibitory interneurons	TEINH18	Basket and bistratified cells, cortex/hippocampus
+Neurons	CNS neurons	Telencephalon interneurons	Telencephalon inhibitory interneurons	DEINH2	Inhibitory neurons, thalamus
+Neurons	CNS neurons	Telencephalon interneurons	Telencephalon inhibitory interneurons	DEINH1	Inhibitory neurons, thalamus
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Peptidergic neurons	DEINH6	Peptidergic neurons, hypothalamus
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon inhibitory neurons	MEINH13	Inhibitory neurons, midbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon inhibitory neurons	MEINH8	Inhibitory neurons, midbrain
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Peptidergic neurons	MEINH14	Inhibitory neurons, midbrain
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Peptidergic neurons	DEINH4	Inhibitory neurons, thalamus
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Peptidergic neurons	DEINH5	Peptidergic neurons, hypothalamus
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Peptidergic neurons	TEINH2	Inhibitory neurons, septal nucleus
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon inhibitory neurons	TEINH1	Inhibitory neurons, pallidum
+Neurons	CNS neurons	Hindbrain neurons	Hindbrain neurons	HBINH4	Inhibitory neurons, hindbrain
+Neurons	CNS neurons	Hindbrain neurons	Hindbrain neurons	HBINH3	Inhibitory neurons, hindbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon inhibitory neurons	HBINH1	Inhibitory neurons, hindbrain
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Peptidergic neurons	SCINH11	Central canal neurons, spinal cord
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon inhibitory neurons	MEINH3	Inhibitory neurons, midbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon inhibitory neurons	MEINH4	Inhibitory neurons, midbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon inhibitory neurons	DEINH3	Inhibitory neurons, hypothalamus
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon inhibitory neurons	MEINH2	Inhibitory neurons, midbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon inhibitory neurons	MEINH7	Inhibitory neurons, midbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon inhibitory neurons	MEINH5	Inhibitory neurons, midbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon inhibitory neurons	MEINH12	Inhibitory neurons, midbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon inhibitory neurons	MEINH11	Inhibitory neurons, midbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon inhibitory neurons	MEINH9	Inhibitory neurons, midbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon inhibitory neurons	MEINH10	Inhibitory neurons, midbrain
+Neurons	CNS neurons	Di- and mesencephalon neurons	Di- and mesencephalon inhibitory neurons	MEINH6	Inhibitory neurons, midbrain
+Neurons	CNS neurons	Hindbrain neurons	Hindbrain neurons	HBINH6	Inhibitory neurons, hindbrain
+Neurons	CNS neurons	Hindbrain neurons	Hindbrain neurons	HBINH2	Inhibitory neurons, hindbrain
+Neurons	CNS neurons	Spinal cord neurons	Spinal cord excitatory neurons	SCGLU8	Excitatory neurons, spinal cord
+Neurons	CNS neurons	Spinal cord neurons	Spinal cord excitatory neurons	SCGLU9	Excitatory neurons, spinal cord
+Neurons	CNS neurons	Spinal cord neurons	Spinal cord excitatory neurons	SCGLU7	Excitatory neurons, spinal cord
+Neurons	CNS neurons	Spinal cord neurons	Spinal cord excitatory neurons	SCGLU2	Excitatory neurons, spinal cord
+Neurons	CNS neurons	Spinal cord neurons	Spinal cord excitatory neurons	SCGLU3	Excitatory neurons, spinal cord
+Neurons	CNS neurons	Spinal cord neurons	Spinal cord excitatory neurons	SCGLU4	Excitatory neurons, spinal cord
+Neurons	CNS neurons	Spinal cord neurons	Spinal cord excitatory neurons	SCGLU6	Excitatory neurons, spinal cord
+Neurons	CNS neurons	Spinal cord neurons	Spinal cord excitatory neurons	SCGLU5	Excitatory neurons, spinal cord
+Neurons	CNS neurons	Spinal cord neurons	Spinal cord inhibitory neurons	SCINH5	Inhibitory neurons, spinal cord
+Neurons	CNS neurons	Spinal cord neurons	Spinal cord inhibitory neurons	SCINH6	Inhibitory neurons, spinal cord
+Neurons	CNS neurons	Spinal cord neurons	Spinal cord inhibitory neurons	SCINH7	Inhibitory neurons, spinal cord
+Neurons	CNS neurons	Spinal cord neurons	Spinal cord inhibitory neurons	HBINH9	Inhibitory neurons, hindbrain
+Neurons	CNS neurons	Spinal cord neurons	Spinal cord inhibitory neurons	SCINH2	Inhibitory neurons, spinal cord
+Neurons	CNS neurons	Spinal cord neurons	Spinal cord inhibitory neurons	SCINH4	Inhibitory neurons, spinal cord
+Neurons	CNS neurons	Spinal cord neurons	Spinal cord inhibitory neurons	SCINH3	Inhibitory neurons, spinal cord
+Neurons	CNS neurons	Spinal cord neurons	Spinal cord inhibitory neurons	SCINH10	Inhibitory neurons, spinal cord
+Neurons	CNS neurons	Spinal cord neurons	Spinal cord inhibitory neurons	SCINH9	Inhibitory neurons, spinal cord
+Neurons	CNS neurons	Spinal cord neurons	Spinal cord inhibitory neurons	SCINH8	Inhibitory neurons, spinal cord
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Peptidergic neurons	TEINH3	Inhibitory neurons, telencephalon
+Neurons	CNS neurons	Telencephalon interneurons	Olfactory inhibitory neurons	OBDOP1	Dopaminergic periglomerular interneuron, olfactory bulb
+Neurons	CNS neurons	Cholinergic, monoaminergic and peptidergic neurons	Peptidergic neurons	HYPEP8	Peptidergic neurons, hypothalamus
+Vascular cells	Vascular cells	Vascular cells	Vascular and leptomeningeal cells	ABC	Vascular leptomeningeal cells
+Vascular cells	Vascular cells	Vascular cells	Vascular and leptomeningeal cells	VLMC2	Vascular leptomeningeal cells
+Vascular cells	Vascular cells	Vascular cells	Vascular and leptomeningeal cells	VLMC1	Vascular leptomeningeal cells
+Vascular cells	Vascular cells	Vascular cells	Vascular smooth muscle cells	VSMCA	Vascular smooth muscle cells, arterial
+Vascular cells	Vascular cells	Vascular cells	Vascular smooth muscle cells	PER3	Pericytes
+Vascular cells	Vascular cells	Vascular cells	Vascular smooth muscle cells	VECA	Vascular endothelial cells, arterial
+Vascular cells	Vascular cells	Vascular cells	Pericytes	PER2	Pericytes, possibly mixed with VENC
+Vascular cells	Vascular cells	Vascular cells	Pericytes	PER1	Pericytes
+Vascular cells	Vascular cells	Vascular cells	Vascular endothelial cells	VECV	Vascular endothelial cells, venous
+Vascular cells	Vascular cells	Vascular cells	Vascular endothelial cells	VECC	Vascular endothelial cells, capillary
+Immune cells	Immune cells	Immune cells	Microglia	MGL1	Microglia
+Immune cells	Immune cells	Immune cells	Microglia	MGL2	Microglia, activated
+Immune cells	Immune cells	Immune cells	Microglia	MGL3	Microglia, activated
+Immune cells	Immune cells	Immune cells	Perivascular macrophages	PVM2	Perivascular macrophages, activated
+Immune cells	Immune cells	Immune cells	Perivascular macrophages	PVM1	Perivascular macrophages
+Glia	Neural crest-like glia	Neural crest-like glia	Schwann cells	SCHW	Schwann cells
+Glia	Neural crest-like glia	Neural crest-like glia	Satellite glia	SATG2	Satellite glia
+Glia	Neural crest-like glia	Neural crest-like glia	Satellite glia	SATG1	Satellite glia, proliferating
+Glia	CNS glia	Astroependymal cells	Astrocytes	ACBG	Bergmann glia
+Glia	CNS glia	Astroependymal cells	Astrocytes	ACOB	Olfactory astrocytes
+Glia	CNS glia	Astroependymal cells	Astrocytes	ACTE1	Telencephalon astrocytes, fibrous
+Glia	CNS glia	Astroependymal cells	Astrocytes	ACTE2	Telencephalon astrocytes, protoplasmic
+Glia	CNS glia	Astroependymal cells	Astrocytes	ACNT1	Non-telencephalon astrocytes, protoplasmic
+Glia	CNS glia	Astroependymal cells	Astrocytes	ACNT2	Non-telencephalon astrocytes, fibrous
+Glia	CNS glia	Astroependymal cells	Astrocytes	ACMB	Dorsal midbrain Myoc-expressing astrocyte-like
+Glia	CNS glia	Astroependymal cells	Ependymal cells	EPEN	Ependymal cells
+Glia	CNS glia	Astroependymal cells	Ependymal cells	EPSC	Ependymal cells, spinal cord
+Glia	CNS glia	Astroependymal cells	Choroid epithelial cells	CHOR	Chorid plexus epithelial cells
+Neurons	PNS neurons	Sympathetic neurons	Sympathetic noradrenergic neurons	SYNOR3	Noradrenergic neurons, sympathetic
+Neurons	PNS neurons	Sympathetic neurons	Sympathetic noradrenergic neurons	SYNOR2	Noradrenergic neurons, sympathetic
+Neurons	PNS neurons	Sympathetic neurons	Sympathetic noradrenergic neurons	SYNOR1	Noradrenergic erector muscle neurons
+Neurons	PNS neurons	Sympathetic neurons	Sympathetic noradrenergic neurons	SYNOR4	Noradrenergic erector muscle neurons
+Neurons	PNS neurons	Sympathetic neurons	Sympathetic noradrenergic neurons	SYNOR5	Noradrenergic erector muscle neurons
+Neurons	PNS neurons	Sympathetic neurons	Sympathetic cholinergic neurons	SYCHO2	Cholinergic neurons, sympathetic
+Neurons	PNS neurons	Sympathetic neurons	Sympathetic cholinergic neurons	SYCHO1	Cholinergic neurons, sympathetic
+Neurons	PNS neurons	Peripheral sensory neurons	Peripheral sensory peptidergic neurons	PSPEP1	Peptidergicv (PEP2), DRG
+Neurons	PNS neurons	Peripheral sensory neurons	Peripheral sensory peptidergic neurons	PSPEP3	Peptidergic (PEP1..4), DRG
+Neurons	PNS neurons	Peripheral sensory neurons	Peripheral sensory peptidergic neurons	PSPEP2	Peptidergic (PEP1.3), DRG
+Neurons	PNS neurons	Peripheral sensory neurons	Peripheral sensory peptidergic neurons	PSPEP4	Peptidergic (PEP1.1), DRG
+Neurons	PNS neurons	Peripheral sensory neurons	Peripheral sensory peptidergic neurons	PSPEP5	Peptidergic (PEP1.2), DRG
+Neurons	PNS neurons	Peripheral sensory neurons	Peripheral sensory peptidergic neurons	PSPEP6	Peptidergic (TrpM8), DRG
+Neurons	PNS neurons	Peripheral sensory neurons	Peripheral sensory peptidergic neurons	PSPEP7	Peptidergic (TrpM8), DRG
+Neurons	PNS neurons	Peripheral sensory neurons	Peripheral sensory peptidergic neurons	PSPEP8	Peptidergic (TrpM8), DRG
+Neurons	PNS neurons	Peripheral sensory neurons	Peripheral sensory neurofilament neurons	PSNF2	Neurofilament (NF4/5), DRG
+Neurons	PNS neurons	Peripheral sensory neurons	Peripheral sensory neurofilament neurons	PSNF3	Neurofilament (NF2/3), DRG
+Neurons	PNS neurons	Peripheral sensory neurons	Peripheral sensory neurofilament neurons	PSNF1	Neurofilament (NF1), DRG
+Neurons	PNS neurons	Peripheral sensory neurons	Peripheral sensory non-peptidergic neurons	PSNP1	Non-peptidergic (TH), DRG
+Neurons	PNS neurons	Peripheral sensory neurons	Peripheral sensory non-peptidergic neurons	PSNP3	Non-peptidergic (NP1.2), DRG
+Neurons	PNS neurons	Peripheral sensory neurons	Peripheral sensory non-peptidergic neurons	PSNP2	Non-peptidergic (NP1.1), DRG
+Neurons	PNS neurons	Peripheral sensory neurons	Peripheral sensory non-peptidergic neurons	PSNP5	Non-peptidergic (NP2.2), DRG
+Neurons	PNS neurons	Peripheral sensory neurons	Peripheral sensory non-peptidergic neurons	PSNP4	Non-peptidergic (NP2.1), DRG
+Neurons	PNS neurons	Peripheral sensory neurons	Peripheral sensory non-peptidergic neurons	PSNP6	Non-peptidergic (NP3), DRG
