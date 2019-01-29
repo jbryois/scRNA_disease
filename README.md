@@ -1,4 +1,4 @@
-# Code
+# Integrating genetics with single cell RNA-seq
 
 !!!Under construction!!!
 
