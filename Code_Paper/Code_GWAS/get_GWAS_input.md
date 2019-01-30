@@ -36,7 +36,8 @@ We will only keep SNP with MAF >1% and with a minimum INFO score >0.6
 
 ```bash
 cd sumstats
-awk 'NR==1 || $13>0.6 && $7>0.01 && $7 <0.99' SavageJansen_2018_intelligence_metaanalysis.txt > int_filtered.txt
+awk 'NR==1 || $13>0.6 && $7>0.01 && $7 <0.99' \
+SavageJansen_2018_intelligence_metaanalysis.txt > int_filtered.txt
 ```
 
 ### Get input for MAGMA
@@ -87,7 +88,9 @@ The file NCBI37.3.gene.loc.extendedMHCexcluded is a filtered version of the MAGM
 
 
 ```bash
-magma --annotate window=35,10 --snp-loc int_filtered.txt.bed --gene-loc ../../../NCBI/NCBI37.3.gene.loc.extendedMHCexcluded --out int.annotated_35kbup_10_down
+magma --annotate window=35,10 --snp-loc int_filtered.txt.bed \
+--gene-loc ../../../NCBI/NCBI37.3.gene.loc.extendedMHCexcluded \
+--out int.annotated_35kbup_10_down
 ```
 
 ### Get gene-level association
