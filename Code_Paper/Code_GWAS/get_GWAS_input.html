@@ -268,7 +268,8 @@ div.tocify {
 <h3>Filter MAF and INFO</h3>
 <p>We will only keep SNP with MAF &gt;1% and with a minimum INFO score &gt;0.6</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">cd</span> sumstats
-<span class="fu">awk</span> <span class="st">'NR==1 || $13&gt;0.6 &amp;&amp; $7&gt;0.01 &amp;&amp; $7 &lt;0.99'</span> SavageJansen_2018_intelligence_metaanalysis.txt <span class="op">&gt;</span> int_filtered.txt</code></pre></div>
+<span class="fu">awk</span> <span class="st">'NR==1 || $13&gt;0.6 &amp;&amp; $7&gt;0.01 &amp;&amp; $7 &lt;0.99'</span> \
+SavageJansen_2018_intelligence_metaanalysis.txt <span class="op">&gt;</span> int_filtered.txt</code></pre></div>
 </div>
 <div id="get-input-for-magma" class="section level3">
 <h3>Get input for MAGMA</h3>
@@ -300,7 +301,9 @@ div.tocify {
 <p>Now that the sumstats are ready, we can use MAGMA to generate an annotation file.</p>
 <p>The following command maps all SNPs to gene using a window starting 35kb upstream and finishing 10kb downstream of each gene.</p>
 <p>The file NCBI37.3.gene.loc.extendedMHCexcluded is a filtered version of the MAGMA NCBI37.3.gene.loc file (removed extended MHC).</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">magma</span> --annotate window=35,10 --snp-loc int_filtered.txt.bed --gene-loc ../../../NCBI/NCBI37.3.gene.loc.extendedMHCexcluded --out int.annotated_35kbup_10_down</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">magma</span> --annotate window=35,10 --snp-loc int_filtered.txt.bed \
+--gene-loc ../../../NCBI/NCBI37.3.gene.loc.extendedMHCexcluded \
+--out int.annotated_35kbup_10_down</code></pre></div>
 </div>
 <div id="get-gene-level-association" class="section level3">
 <h3>Get gene-level association</h3>
