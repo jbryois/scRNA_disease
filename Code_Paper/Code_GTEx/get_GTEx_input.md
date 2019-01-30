@@ -1,5 +1,5 @@
 ---
-title: "Single Cell Data Set - GTEx 2017"
+title: "Bulk RNA-seq Data Set - GTEx 2017"
 output: 
   html_document:
     toc: true
@@ -16,7 +16,7 @@ output:
 library(tidyverse)
 ```
 
-### Load single cell dataset
+### Load GTEx dataset
 
 
 ```r
@@ -75,7 +75,9 @@ gene_coordinates <-
   mutate(chr=paste0("chr",chr))
 ```
 
-# get ENTREZ names
+# Filter genes
+
+Get table for ENTREZ and ENSEMBL gene names.
 
 
 ```r
@@ -86,7 +88,7 @@ entrez_ensembl <- AnnotationDbi::toTable(org.Hs.eg.db::org.Hs.egENSEMBL)
 ## 
 ```
 
-Only keep genes with a unique entrez and ensembl id
+Only keep genes with a unique entrez and ensembl id.
 
 
 ```r
@@ -102,14 +104,14 @@ gene_coordinates <- inner_join(entrez_ensembl,gene_coordinates) %>% as.tibble()
 ## Joining, by = "ENTREZ"
 ```
 
-# Transform Data
-
 
 ```r
 exp_lvl5 <- exp %>% rename(Expr_sum_mean=Expr,Gene=gene_id)
 ```
 
-### Get only MAGMA genes 
+### Only keep MAGMA genes 
+
+Only keep protein coding genes present in the MAGMA gene file.
 
 
 ```r
@@ -128,21 +130,18 @@ dic_lvl5 <- exp_lvl5 %>% select(Lvl5) %>% unique() %>% mutate(makenames=make.nam
 write_tsv(dic_lvl5,"../../Data/GTEx//dictionary_cell_type_names.txt")
 ```
 
-### Get summary stats on the dataset
-
-
-```r
-sumstats_lvl5 <- exp_lvl5 %>% group_by(Lvl5) %>%
-  summarise(total_exp=sum(Expr_sum_mean),Ngenes=sum(Expr_sum_mean>0))
-```
-
 # QC
 
 ### Remove not expressed genes
 
 
 ```r
-not_expressed <- exp_lvl5 %>% group_by(Gene) %>% summarise(total_sum=sum(Expr_sum_mean)) %>% filter(total_sum==0) %>% select(Gene) %>% unique() 
+not_expressed <- exp_lvl5 %>% group_by(Gene) %>% 
+  summarise(total_sum=sum(Expr_sum_mean)) %>% 
+  filter(total_sum==0) %>% 
+  select(Gene) %>% 
+  unique() 
+
 exp_lvl5 <- filter(exp_lvl5,!Gene%in%not_expressed$Gene)
 ```
 
@@ -150,19 +149,17 @@ exp_lvl5 <- filter(exp_lvl5,!Gene%in%not_expressed$Gene)
 
 The specifitiy is defined as the proportion of total expression performed by the cell type of interest (x/sum(x)).
 
-### Lvl5
-
 
 ```r
 exp_lvl5 <- exp_lvl5 %>% group_by(Gene) %>% 
-  mutate(specificity=Expr_sum_mean/sum(Expr_sum_mean),max=max(Expr_sum_mean))
+  mutate(specificity=Expr_sum_mean/sum(Expr_sum_mean),
+         max=max(Expr_sum_mean))
 
 exp_lvl5 <- exp_lvl5 %>% group_by(Lvl5) %>%
     mutate(spe_norm=GenABEL::rntransform(specificity))
 ```
 
 ### Functions
-
 
 #### Get MAGMA input continuous
 
@@ -204,6 +201,8 @@ Keep all genes for continuous analysis.
 ```r
 magma_input(exp_lvl5,"Lvl5","spe_norm","no_filter")
 ```
+
+Filter out low expressed genes (<1 TPM) and get the 10% most specific genes.
 
 
 ```r
