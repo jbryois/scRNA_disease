@@ -225,6 +225,7 @@ div.tocify {
 
 <div id="load-data" class="section level1">
 <h1>Load Data</h1>
+<p>The Zeisel data was downloaded from <a href="http://mousebrain.org/downloads.html">here</a></p>
 <div id="load-necessary-libraries" class="section level3">
 <h3>Load necessary libraries</h3>
 <pre class="r"><code>library(tidyverse)
@@ -240,7 +241,8 @@ exp$Gene &lt;- h5f$row_attrs$Gene</code></pre>
 <p>Only keep genes with a unique name and tidy data</p>
 <pre class="r"><code>exp &lt;- exp %&gt;% add_count(Gene) %&gt;% 
   filter(n==1) %&gt;%
-  gather(key = column,value=Expr,-Gene,-n) %&gt;%
+  select(-n) %&gt;%
+  gather(key = column,value=Expr,-Gene) %&gt;%
   as.tibble()</code></pre>
 </div>
 <div id="load-gene-coordinates" class="section level3">

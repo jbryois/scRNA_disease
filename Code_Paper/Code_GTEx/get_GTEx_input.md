@@ -18,6 +18,8 @@ library(tidyverse)
 
 ### Load GTEx dataset
 
+The GTEx data was downloaded from [here](https://gtexportal.org)
+
 
 ```r
 file="../../Data/GTEx/GTEx_Analysis_2016-01-15_v7_RNASeQCv1.1.8_gene_median_tpm.gct"

@@ -9,6 +9,8 @@ output:
 
 # Load Data
 
+The Zeisel data was downloaded from [here](http://mousebrain.org/downloads.html)
+
 ### Load necessary libraries
 
 
@@ -34,7 +36,8 @@ Only keep genes with a unique name and tidy data
 ```r
 exp <- exp %>% add_count(Gene) %>% 
   filter(n==1) %>%
-  gather(key = column,value=Expr,-Gene,-n) %>%
+  select(-n) %>%
+  gather(key = column,value=Expr,-Gene) %>%
   as.tibble()
 ```
 
