@@ -1,0 +1,28 @@
+# MEAN_SAMPLE_SIZE = 250682
+# TOTAL_GENES = 14324
+# CONDITIONED_INTERNAL = genesize, log_genesize, genedensity, log_genedensity, samplesize, log_samplesize, inverse_mac, log_inverse_mac
+COVAR                                      OBS_GENES       BETA   BETA_STD         SE            P
+astrocytes_ependymal                           14324    0.00148     0.0017     0.0109      0.44584
+Dopaminergic.Adult                             14324     0.0298     0.0342     0.0109    0.0032168
+Dopaminergic.Neuroblast                        14324     0.0507     0.0568     0.0112   3.0435e-06
+Embryonic.Dopaminergic.Neuron                  14324     0.0461     0.0527      0.011   1.3737e-05
+Embryonic.GABAergic.Neuron                     14324     0.0454     0.0534     0.0107   1.0304e-05
+Embryonic.midbrain.nucleus.neurons             14324     0.0399      0.046     0.0109   0.00012372
+endothelial.mural                              14324   -0.00667   -0.00778     0.0107      0.73373
+Hypothalamic.Dopaminergic.Neurons              14324     0.0369     0.0426     0.0108   0.00033403
+Hypothalamic.GABAergic.Neurons                 14324     0.0135      0.016     0.0106      0.10066
+Hypothalamic.Glutamatergic.Neurons             14324     0.0189     0.0223     0.0106     0.037482
+interneurons                                   14324     0.0587     0.0685     0.0107   2.2183e-08
+Medium.Spiny.Neuron                            14324     0.0794     0.0869     0.0115   2.3529e-12
+microglia                                      14324    0.00636    0.00723      0.011      0.28171
+Neural.Progenitors                             14324      0.016     0.0183      0.011     0.072844
+Neuroblasts                                    14324     0.0385     0.0461     0.0105   0.00011462
+Oligodendrocyte.Precursor                      14324     0.0259     0.0298     0.0109    0.0087077
+Oligodendrocytes                               14324     0.0247      0.029     0.0107      0.01065
+Oxytocin...Vasopressin.Expressing.Neurons      14324     0.0112     0.0129      0.011      0.15304
+pyramidal.CA1                                  14324     0.0838     0.0981     0.0107   2.5993e-15
+pyramidal.SS                                   14324     0.0888      0.102     0.0108   1.3056e-16
+Radial.glia.like.cells                         14324     0.0188      0.022     0.0107     0.039335
+Serotonergic.Neuron                            14324     0.0572     0.0643     0.0112   1.7154e-07
+Striatal.Interneuron                           14324     0.0373     0.0415     0.0113   0.00046952
+Vascular.Leptomeningeal.Cells                  14324   -0.00968    -0.0107     0.0113       0.8042

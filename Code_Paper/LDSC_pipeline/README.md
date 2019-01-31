@@ -1,3 +1,15 @@
+The following code is intended to be run on a cluster using SLURM.
+
+You will need to upload the 'Bed_4LDSC2_exp_gt_0.1' folders on the cluster. LDSC will also need to be downloaded and installed on the server.
+
+Annotation files for partitioned LDSC are also necessary.
+
+Ex:
+
+```
+scp -r LDSC_GTEx/Bed_4LDSC2_exp_gt_0.1 user@server.com:/home/LDSC_GTEx
+````
+
 # Load modules
 
 ```
