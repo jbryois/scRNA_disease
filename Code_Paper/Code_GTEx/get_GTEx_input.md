@@ -51,6 +51,7 @@ Only keep genes with a unique name
 ```r
 exp <- exp %>% add_count(gene_id) %>% 
   filter(n==1) %>%
+  select(-n) %>%
   mutate(gene_id=gsub("\\..+","",gene_id)) %>%
   gather(key = Lvl5,value=Expr,-gene_id,-Description) %>% 
   as.tibble()

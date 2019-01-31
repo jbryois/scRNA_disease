@@ -34,7 +34,7 @@ Only keep genes with a unique name and tidy data
 ```r
 exp <- exp %>% add_count(Gene) %>% 
   filter(n==1) %>%
-  gather(key = column,value=Expr,-Gene) %>%
+  gather(key = column,value=Expr,-Gene,-n) %>%
   as.tibble()
 ```
 
