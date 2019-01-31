@@ -240,7 +240,7 @@ exp$Gene &lt;- h5f$row_attrs$Gene</code></pre>
 <p>Only keep genes with a unique name and tidy data</p>
 <pre class="r"><code>exp &lt;- exp %&gt;% add_count(Gene) %&gt;% 
   filter(n==1) %&gt;%
-  gather(key = column,value=Expr,-Gene) %&gt;%
+  gather(key = column,value=Expr,-Gene,-n) %&gt;%
   as.tibble()</code></pre>
 </div>
 <div id="load-gene-coordinates" class="section level3">

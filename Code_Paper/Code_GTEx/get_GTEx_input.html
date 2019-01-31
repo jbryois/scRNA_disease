@@ -248,6 +248,7 @@ exp &lt;- cbind(exp[c(1,2)],exp_scaled) %&gt;% as.tibble()</code></pre>
 <p>Only keep genes with a unique name</p>
 <pre class="r"><code>exp &lt;- exp %&gt;% add_count(gene_id) %&gt;% 
   filter(n==1) %&gt;%
+  select(-n) %&gt;%
   mutate(gene_id=gsub(&quot;\\..+&quot;,&quot;&quot;,gene_id)) %&gt;%
   gather(key = Lvl5,value=Expr,-gene_id,-Description) %&gt;% 
   as.tibble()</code></pre>
