@@ -12,7 +12,7 @@ The code to reproduce our results is located in this repository. The following l
 
 ## Run MAGMA
 
-Once the GWAS sumstats are ready and the specificity files are ready, you can use the following [code](Code_Paper/Code_GTEx/get_Zeisel_input.md) to test for associations using MAGMA.
+Once the GWAS sumstats are ready and the specificity files are ready, you can use the following [code](Code_Paper/Code_Zeisel/run_MAGMA.md) to test for associations using MAGMA (Zeisel data set in this example).
 
 ## Run LDSC
 
@@ -20,5 +20,9 @@ Once the GWAS sumstats are ready and the specificity files are ready, you can us
 
 The code to look for heritability enrichment of the top10% most specific genes was made to be run in parallele on a SLURM cluster. It would need to be adapted if you want to run it locally.
 
-
 **Under construction**
+
+To do: 
+1) Add Saunders, Habib and Skene datasets processing files
+2) Add LDSC get pvalue file
+3) Clean a bit
