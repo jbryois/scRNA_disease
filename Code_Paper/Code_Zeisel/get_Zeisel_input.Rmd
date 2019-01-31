@@ -9,6 +9,8 @@ output:
 
 # Load Data
 
+The Zeisel data was downloaded from [here](http://mousebrain.org/downloads.html)
+
 ### Load necessary libraries
 
 ```{R, load data,message=FALSE, warning=FALSE}
