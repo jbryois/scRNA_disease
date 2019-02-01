@@ -2,6 +2,21 @@
 
 The paper is currently on bioRxiv and can be accessed [here](https://www.biorxiv.org/content/10.1101/528463v1).
 
+# Requirements
+
+1. R libraries:
+
+- Tidyverse
+- AnnotationDbi
+- org.Hs.eg.db
+- GenABEL
+
+2. [MAGMA](https://ctg.cncr.nl/software/magma)
+
+3. [Partitioned LDSC](https://github.com/bulik/ldsc/wiki/Partitioned-Heritability)
+
+# Steps
+
 The code to reproduce our results is located in this repository. The following links show the essential steps:
 
 1) Get GWAS summary statistics in the right format for MAGMA and LDSC. [Code](Code_Paper/Code_GWAS/get_GWAS_input.md)
