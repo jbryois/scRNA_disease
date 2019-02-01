@@ -29,9 +29,9 @@ The code to reproduce our results is located in this repository. The following l
 
 4) [Get MAGMA and LDSC input for the Skene et al. data set](Code_Paper/Code_Skene/get_Skene_input.md)
 
-5) [Get MAGMA and LDSC input for the Skene et al. data set](Code_Paper/Code_Habib/get_Habib_input.md)
+5) [Get MAGMA and LDSC input for the Habib et al. data set](Code_Paper/Code_Habib/get_Habib_input.md)
 
-6) [Get MAGMA and LDSC input for the Skene et al. data set](Code_Paper/Code_Saunders/get_Saunders_input.md)
+6) [Get MAGMA and LDSC input for the Saunders et al. data set](Code_Paper/Code_Saunders/get_Saunders_input.md)
 
 ## Run MAGMA
 
