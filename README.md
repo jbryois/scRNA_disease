@@ -4,17 +4,18 @@ The paper is currently on bioRxiv and can be accessed [here](https://www.biorxiv
 
 # Requirements
 
-1. R libraries (Tidyverse, AnnotationDbi, org.Hs.eg.db, GenABEL)
-
-Installed using the following command in R:
+1. R libraries
 
 ```
 install.packages("tidyverse")
+install.packages("AnnotationDbi")
+install.packages("org.Hs.eg.db")
+install.packages("GenABEL")
 ```
 
-2. [MAGMA](https://ctg.cncr.nl/software/magma)
+2. [MAGMA](https://ctg.cncr.nl/software/magma) and its auxiliary files
 
-3. [Partitioned LDSC](https://github.com/bulik/ldsc/wiki/Partitioned-Heritability)
+3. [Partitioned LDSC](https://github.com/bulik/ldsc/wiki/Partitioned-Heritability) and its auxiliary files
 
 # Steps
 
