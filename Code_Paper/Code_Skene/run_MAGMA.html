@@ -127,8 +127,8 @@ $(document).ready(function () {
 
 <p>We can now run MAGMA on the processed intelligence GWAS using the following commands:</p>
 <pre class="r"><code>cd MAGMA_Skene/
-int=&quot;../../../Data/GWAS/Intelligence/sumstats/int.annotated_35kbup_10_down.genes.raw&quot;
-RANDOM_GENE_SET=&quot;../../../Data/random_gene_sets/synaptic_ARC_Seth_Grant.t.txt&quot;
+int=&quot;../../Data/GWAS/Intelligence/sumstats/int.annotated_35kbup_10_down.genes.raw&quot;
+RANDOM_GENE_SET=&quot;../../Data/random_gene_sets/synaptic_ARC_Seth_Grant.t.txt&quot;
 cell_type=&quot;Lvl5_spe_norm_no_filter.txt&quot;
 magma --gene-results  $int --set-annot  $RANDOM_GENE_SET --gene-covar $cell_type filter onesided --out int
 cd ..</code></pre>

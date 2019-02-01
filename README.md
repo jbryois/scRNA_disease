@@ -11,6 +11,7 @@ install.packages("tidyverse")
 install.packages("AnnotationDbi")
 install.packages("org.Hs.eg.db")
 install.packages("GenABEL")
+install.packages("stringr")
 ```
 
 2. [MAGMA](https://ctg.cncr.nl/software/magma) and its auxiliary files
@@ -19,7 +20,9 @@ install.packages("GenABEL")
 
 # Steps
 
-The code to reproduce our results is located in this repository. The following links show the essential steps:
+The code to reproduce our results is located in this repository. 
+
+The following links show the essential steps:
 
 1) [Get GWAS summary statistics in the right format for MAGMA and LDSC](Code_Paper/Code_GWAS/get_GWAS_input.md)
 

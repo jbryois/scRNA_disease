@@ -2,9 +2,7 @@
 title: "Bulk RNA-seq Data Set - GTEx 2017"
 output: 
   html_document:
-    toc: true
-    toc_float: true
-    keep_md: true
+  keep_md: true
 ---
 
 # Load Data
@@ -19,7 +17,7 @@ library(tidyverse)
 
 The GTEx data was downloaded from [here](https://gtexportal.org)
 
-```{r}
+```{r,message=FALSE}
 file="../../Data/GTEx/GTEx_Analysis_2016-01-15_v7_RNASeQCv1.1.8_gene_median_tpm.gct"
 exp <- read_tsv(file,skip=2)
 ```
@@ -52,7 +50,7 @@ Filtered to remove extended MHC (chr6, 25Mb to 34Mb).
 
 ```{R, load coordinates,message=F}
 gene_coordinates <- 
-  read_tsv("../../Data/NCBI/NCBI37.3.gene.loc.extendedMHCexcluded",
+  read_tsv("../Data/NCBI/NCBI37.3.gene.loc.extendedMHCexcluded",
            col_names = FALSE,col_types = 'cciicc') %>%
   mutate(start=ifelse(X3-100000<0,0,X3-100000),end=X4+100000) %>%
   select(X2,start,end,1) %>% 
@@ -64,13 +62,13 @@ gene_coordinates <-
 
 Get table for ENTREZ and ENSEMBL gene names.
 
-```{R}
+```{R,message=FALSE}
 entrez_ensembl <- AnnotationDbi::toTable(org.Hs.eg.db::org.Hs.egENSEMBL)
 ```
 
 Only keep genes with a unique entrez and ensembl id.
 
-```{r}
+```{r,message=FALSE}
 entrez_ensembl_unique_genes_entrez <- entrez_ensembl %>% count(gene_id) %>% filter(n==1)
 entrez_ensembl_unique_genes_ens <- entrez_ensembl %>% count(ensembl_id) %>% filter(n==1)
 entrez_ensembl <- filter(entrez_ensembl,gene_id%in%entrez_ensembl_unique_genes_entrez$gene_id & ensembl_id %in% entrez_ensembl_unique_genes_ens$ensembl_id)
@@ -87,7 +85,7 @@ exp_lvl5 <- exp %>% rename(Expr_sum_mean=Expr,Gene=gene_id)
 
 Only keep protein coding genes present in the MAGMA gene file.
 
-```{r}
+```{r,message=FALSE}
 exp_lvl5 <- inner_join(exp_lvl5,gene_coordinates)
 ```
 
@@ -95,7 +93,7 @@ exp_lvl5 <- inner_join(exp_lvl5,gene_coordinates)
 
 ```{R, write dictionnary,message=F}
 dic_lvl5 <- exp_lvl5 %>% select(Lvl5) %>% unique() %>% mutate(makenames=make.names(Lvl5))
-write_tsv(dic_lvl5,"../../Data/GTEx//dictionary_cell_type_names.txt")
+write_tsv(dic_lvl5,"../Data/GTEx/dictionary_cell_type_names.txt")
 ```
 
 # QC

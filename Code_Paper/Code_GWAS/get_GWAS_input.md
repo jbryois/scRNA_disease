@@ -2,8 +2,6 @@
 title: "GWAS input"
 output: 
   html_document:
-    toc: true
-    toc_float: true
     keep_md: true
     highlight: pygments
 ---
@@ -16,8 +14,8 @@ We will use the GWAS sumstats of [intelligence](https://www.nature.com/articles/
 
 
 ```bash
-mkdir -p ../../Data/GWAS/Intelligence
-cd ../../Data/GWAS/Intelligence
+mkdir -p ../Data/GWAS/Intelligence
+cd ../Data/GWAS/Intelligence
 if [ ! -f SavageJansen_IntMeta_sumstats.zip ]
 then
     wget https://ctg.cncr.nl/documents/p1651/SavageJansen_IntMeta_sumstats.zip
@@ -71,8 +69,8 @@ The g1000_eur.bim file is part of the MAGMA installation (see link above).
 
 
 ```bash
-python ../../../../Code_Paper/utils/fast_match.py \
--b ../../../../../../MAGMA/g1000_ceu_phase3/g1000_eur.bim \
+python ../../../../utils/fast_match.py \
+-b ../../../../../../../MAGMA/g1000_ceu_phase3/g1000_eur.bim \
 -bcols 1,0,3 \
 -g int_filtered.txt \
 -gcols 0,10,11
@@ -95,11 +93,13 @@ magma --annotate window=35,10 --snp-loc int_filtered.txt.bed \
 
 ### Get gene-level association
 
-Now we can get the gene level associations.
+Now we can get the gene level associations. 
+
+(Note that the location of the bim file depends on where your MAGMA auxiliary files are on your system).
 
 
 ```bash
-magma --bfile ../../../../../../MAGMA/g1000_ceu_phase3/g1000_eur \
+magma --bfile ../../../../../../../MAGMA//g1000_ceu_phase3/g1000_eur \
 --pval int_filtered.txt.pval ncol=3 \
 --gene-annot int.annotated_35kbup_10_down.genes.annot \
 --out int.annotated_35kbup_10_down
@@ -111,13 +111,15 @@ The magma file is now ready for association with gene expression specificity.
 
 LDSC needs to be downloaded and installed. See the following [link](https://github.com/bulik/ldsc/wiki)
 
-The summary stats ready for association can then be obtained using the following command:
+The summary stats ready for association can then be obtained using the following command:  
+
+(Note that the location of the w_hm3.snplist file depends on where your LDSC auxiliary files are on your system):
 
 
 ```bash
 munge_sumstats.py \
 --sumstats int_filtered.txt \
---merge-alleles ../../../../../../Software/ldsc/w_hm3.snplist \
+--merge-alleles ../../../../../../../Software/ldsc/w_hm3.snplist \
 --signed-sumstat Zscore,0 \
 --N-col N_analyzed \
 --out int

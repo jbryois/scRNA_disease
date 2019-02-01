@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 The following code is intended to be run on a cluster using SLURM.
 
 You will need to upload the 'Bed_4LDSC2_exp_gt_0.1' folders on the cluster. LDSC will also need to be downloaded and installed on the server.
@@ -11,8 +10,6 @@ Ex:
 scp -r LDSC_GTEx/Bed_4LDSC2_exp_gt_0.1 user@server.com:/home/LDSC_GTEx
 ````
 
-=======
->>>>>>> ea5a3788b0585a60b4af9a4e04ec7b8d8c3d3d06
 # Load modules
 
 ```
@@ -45,4 +42,14 @@ for all annotations
 ```
 cd Bed_4LDSC2_exp_gt_0.1
 sbatch -t 1:00:00 -n 1 -o log_get_partitioned_finucane_h2clozuk --wrap="sh get_partitioned_h2_tissue_v2.sh int.sumstats.gz"
+```
+
+# Get Pvalues
+
+Once the previous steps are finished, you can gather all pvalues for the annotations using the following command:
+
+This need to be launched in the folder where all the bed files are located
+
+```
+sbatch -t 1:00:00 -n 1 -o log_get_pvalues --wrap="Rscript get_tissue_pvalue.R"
 ```

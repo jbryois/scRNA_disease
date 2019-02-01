@@ -1,0 +1,54 @@
+Lvl5	makenames
+Adipose - Subcutaneous	Adipose...Subcutaneous
+Adipose - Visceral (Omentum)	Adipose...Visceral..Omentum.
+Adrenal Gland	Adrenal.Gland
+Artery - Aorta	Artery...Aorta
+Artery - Coronary	Artery...Coronary
+Artery - Tibial	Artery...Tibial
+Bladder	Bladder
+Brain - Amygdala	Brain...Amygdala
+Brain - Anterior cingulate cortex (BA24)	Brain...Anterior.cingulate.cortex..BA24.
+Brain - Caudate (basal ganglia)	Brain...Caudate..basal.ganglia.
+Brain - Cerebellar Hemisphere	Brain...Cerebellar.Hemisphere
+Brain - Cerebellum	Brain...Cerebellum
+Brain - Cortex	Brain...Cortex
+Brain - Frontal Cortex (BA9)	Brain...Frontal.Cortex..BA9.
+Brain - Hippocampus	Brain...Hippocampus
+Brain - Hypothalamus	Brain...Hypothalamus
+Brain - Nucleus accumbens (basal ganglia)	Brain...Nucleus.accumbens..basal.ganglia.
+Brain - Putamen (basal ganglia)	Brain...Putamen..basal.ganglia.
+Brain - Spinal cord (cervical c-1)	Brain...Spinal.cord..cervical.c.1.
+Brain - Substantia nigra	Brain...Substantia.nigra
+Breast - Mammary Tissue	Breast...Mammary.Tissue
+Cells - EBV-transformed lymphocytes	Cells...EBV.transformed.lymphocytes
+Cells - Transformed fibroblasts	Cells...Transformed.fibroblasts
+Cervix - Ectocervix	Cervix...Ectocervix
+Cervix - Endocervix	Cervix...Endocervix
+Colon - Sigmoid	Colon...Sigmoid
+Colon - Transverse	Colon...Transverse
+Esophagus - Gastroesophageal Junction	Esophagus...Gastroesophageal.Junction
+Esophagus - Mucosa	Esophagus...Mucosa
+Esophagus - Muscularis	Esophagus...Muscularis
+Fallopian Tube	Fallopian.Tube
+Heart - Atrial Appendage	Heart...Atrial.Appendage
+Heart - Left Ventricle	Heart...Left.Ventricle
+Kidney - Cortex	Kidney...Cortex
+Liver	Liver
+Lung	Lung
+Minor Salivary Gland	Minor.Salivary.Gland
+Muscle - Skeletal	Muscle...Skeletal
+Nerve - Tibial	Nerve...Tibial
+Ovary	Ovary
+Pancreas	Pancreas
+Pituitary	Pituitary
+Prostate	Prostate
+Skin - Not Sun Exposed (Suprapubic)	Skin...Not.Sun.Exposed..Suprapubic.
+Skin - Sun Exposed (Lower leg)	Skin...Sun.Exposed..Lower.leg.
+Small Intestine - Terminal Ileum	Small.Intestine...Terminal.Ileum
+Spleen	Spleen
+Stomach	Stomach
+Testis	Testis
+Thyroid	Thyroid
+Uterus	Uterus
+Vagina	Vagina
+Whole Blood	Whole.Blood

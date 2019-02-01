@@ -2,9 +2,7 @@
 title: "Single Cell Data Set - Habib 2017"
 output: 
   html_document:
-    toc: true
-    toc_float: true
-    keep_md: true
+  keep_md: true
 ---
 
 # Load Data

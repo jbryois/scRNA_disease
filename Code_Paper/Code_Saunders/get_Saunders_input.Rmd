@@ -2,9 +2,7 @@
 title: "Single Cell Data Set - Saunders 2018"
 output: 
   html_document:
-    toc: true
-    toc_float: true
-    keep_md: true
+  keep_md: true
 ---
 
 The data was downloade from [here](http://dropviz.org)
