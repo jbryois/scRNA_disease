@@ -33,16 +33,22 @@ The code to reproduce our results is located in this repository. The following l
 
 6) [Get MAGMA and LDSC input for the Saunders et al. data set](Code_Paper/Code_Saunders/get_Saunders_input.md)
 
-## Run MAGMA
+# Run MAGMA
 
 Once the GWAS sumstats are ready and the specificity files are ready, you can use the following [code](Code_Paper/Code_Zeisel/run_MAGMA.md) to test for associations using MAGMA (Zeisel data set in this example).
 
 If you want to run your GWAS with our specificity files, you just need to get the 'Lvl5_spe_norm_no_filter.txt' files in the different MAGMA folders and run the code above.
 
-## Run LDSC
+# Run LDSC
 
 Once the GWAS sumstats are ready and the specificity files are ready, you can use the following [code](Code_Paper/LDSC_pipeline/README.md) to test for associations using LDSC.
 
 The code to look for heritability enrichment of the top10% most specific genes was made to be run in parallele on a SLURM cluster. It would need to be adapted if you want to run it locally.
+
+# Expression Weighted Celltype Enrichment
+
+The paper describing EWCE is accessible [here](https://www.frontiersin.org/articles/10.3389/fnins.2016.00016/full).
+
+EWCE code is accessible [here](https://github.com/NathanSkene/EWCE).
 
 
