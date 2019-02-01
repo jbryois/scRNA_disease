@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 The following code is intended to be run on a cluster using SLURM.
 
 You will need to upload the 'Bed_4LDSC2_exp_gt_0.1' folders on the cluster. LDSC will also need to be downloaded and installed on the server.
@@ -10,6 +11,8 @@ Ex:
 scp -r LDSC_GTEx/Bed_4LDSC2_exp_gt_0.1 user@server.com:/home/LDSC_GTEx
 ````
 
+=======
+>>>>>>> ea5a3788b0585a60b4af9a4e04ec7b8d8c3d3d06
 # Load modules
 
 ```

@@ -100,7 +100,11 @@ magma --bfile ../../../../../../MAGMA/g1000_ceu_phase3/g1000_eur \
 
 The magma file is now ready for association with gene expression specificity.
 
+<<<<<<< HEAD
 # LDSC
+=======
+#LDSC
+>>>>>>> ea5a3788b0585a60b4af9a4e04ec7b8d8c3d3d06
 
 LDSC needs to be downloaded and installed. See the following [link](https://github.com/bulik/ldsc/wiki)
 
@@ -115,4 +119,8 @@ munge_sumstats.py \
 --out int
 ```
 
+<<<<<<< HEAD
 The LDSC sumstats file is now also ready.
+=======
+The LDSC file is now ready for association with gene expression specificity.
+>>>>>>> ea5a3788b0585a60b4af9a4e04ec7b8d8c3d3d06
