@@ -4,12 +4,13 @@ The paper is currently on bioRxiv and can be accessed [here](https://www.biorxiv
 
 # Requirements
 
-1. R libraries:
+1. R libraries (Tidyverse, AnnotationDbi, org.Hs.eg.db, GenABEL)
 
-- Tidyverse
-- AnnotationDbi
-- org.Hs.eg.db
-- GenABEL
+Installed using the following command in R:
+
+```
+install.packages("tidyverse")
+```
 
 2. [MAGMA](https://ctg.cncr.nl/software/magma)
 
