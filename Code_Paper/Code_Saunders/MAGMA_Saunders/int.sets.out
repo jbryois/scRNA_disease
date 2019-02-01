@@ -1,5 +1,0 @@
-# MEAN_SAMPLE_SIZE = 250665
-# TOTAL_GENES = 15721
-# CONDITIONED_INTERNAL = genesize, log_genesize, genedensity, log_genedensity, samplesize, log_samplesize, inverse_mac, log_inverse_mac
-SET                        NGENES       BETA   BETA_STD         SE            P FULL_NAME
-Fernandez.2018.All.ARC...     772      0.146     0.0316     0.0451   0.00058337 Fernandez.2018.All.ARC.interactors
