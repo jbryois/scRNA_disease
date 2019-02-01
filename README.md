@@ -21,17 +21,17 @@ install.packages("GenABEL")
 
 The code to reproduce our results is located in this repository. The following links show the essential steps:
 
-1) Get GWAS summary statistics in the right format for MAGMA and LDSC. [Code](Code_Paper/Code_GWAS/get_GWAS_input.md)
+1) [Get GWAS summary statistics in the right format for MAGMA and LDSC](Code_Paper/Code_GWAS/get_GWAS_input.md)
 
-2) Get MAGMA and LDSC input for the Zeisel et al. data set. [Code](Code_Paper/Code_Zeisel/get_Zeisel_input.md)
+2) [Get MAGMA and LDSC input for the Zeisel et al. data set](Code_Paper/Code_Zeisel/get_Zeisel_input.md)
 
-3) Get MAGMA and LDSC input for the GTEx et al. data set. [Code](Code_Paper/Code_GTEx/get_GTEx_input.md)
+3) [Get MAGMA and LDSC input for the GTEx et al. data set](Code_Paper/Code_GTEx/get_GTEx_input.md)
 
-4) Get MAGMA and LDSC input for the Skene et al. data set. [Code](Code_Paper/Code_Skene/get_Skene_input.md)
+4) [Get MAGMA and LDSC input for the Skene et al. data set](Code_Paper/Code_Skene/get_Skene_input.md)
 
-5) Get MAGMA and LDSC input for the Skene et al. data set. [Code](Code_Paper/Code_Habib/get_Habib_input.md)
+5) [Get MAGMA and LDSC input for the Skene et al. data set](Code_Paper/Code_Habib/get_Habib_input.md)
 
-6) Get MAGMA and LDSC input for the Skene et al. data set. [Code](Code_Paper/Code_Saunders/get_Saunders_input.md)
+6) [Get MAGMA and LDSC input for the Skene et al. data set](Code_Paper/Code_Saunders/get_Saunders_input.md)
 
 ## Run MAGMA
 
