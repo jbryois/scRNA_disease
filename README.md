@@ -18,6 +18,12 @@ install.packages("stringr")
 
 3. [Partitioned LDSC](https://github.com/bulik/ldsc/wiki/Partitioned-Heritability) and its auxiliary files
 
+# Specificity files
+
+You can download the gene expression specificity files for the different datasets used [here](https://www.dropbox.com/s/h2v5ebs2hxghrx0/Code_Paper_specificity.zip?dl=0).
+
+By following step [1)](Code_Paper/Code_GWAS/get_GWAS_input.md) on your GWAS, you should then be able to run quickly the MAGMA association [code](Code_Paper/Code_Zeisel/run_MAGMA.md) and the LDSC [code](Code_Paper/LDSC_pipeline/README.md) on your cluster.
+
 # Steps
 
 The code to reproduce our results is located in this repository. 
