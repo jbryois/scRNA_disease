@@ -287,7 +287,7 @@ SavageJansen_2018_intelligence_metaanalysis.txt <span class="op">&gt;</span> int
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">rs12184267</span>      1       715265  715265
 <span class="ex">rs12184277</span>      1       715367  715367
 <span class="ex">rs116801199</span>     1       720381  720381</code></pre></div>
-<p>These can be simply generated using awk scripts. However, sometimes the sumstats do not contain the position but only the rsid. In such case the following script can be used (<strong>fast_match.py</strong>).</p>
+<p>These can be simply generated using awk scripts. However, sometimes the sumstats do not contain the position but only the rsid. In such case the following script can be used (<strong>fast_match.py</strong> in utils folder of this repository).</p>
 <p><strong>fast_match.py</strong> filters out any SNP that is not in the 1000 genomes data and gets the position based on SNP ID from the 1000 genomes file.</p>
 <p>The g1000_eur.bim file is part of the MAGMA installation (see link above).</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">python</span> ../../../../Code_Paper/utils/fast_match.py \
@@ -298,9 +298,9 @@ SavageJansen_2018_intelligence_metaanalysis.txt <span class="op">&gt;</span> int
 </div>
 <div id="get-annotation-for-magma" class="section level3">
 <h3>Get annotation for MAGMA</h3>
-<p>Now that the sumstats are ready, we can use MAGMA to generate an annotation file.</p>
+<p>Now that the sumstats are in the right format, we can use MAGMA to generate an annotation file.</p>
 <p>The following command maps all SNPs to gene using a window starting 35kb upstream and finishing 10kb downstream of each gene.</p>
-<p>The file NCBI37.3.gene.loc.extendedMHCexcluded is a filtered version of the MAGMA NCBI37.3.gene.loc file (removed extended MHC).</p>
+<p>The file NCBI37.3.gene.loc.extendedMHCexcluded is a filtered version of the MAGMA NCBI37.3.gene.loc auxiliary file (removed extended MHC).</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">magma</span> --annotate window=35,10 --snp-loc int_filtered.txt.bed \
 --gene-loc ../../../NCBI/NCBI37.3.gene.loc.extendedMHCexcluded \
 --out int.annotated_35kbup_10_down</code></pre></div>
@@ -325,11 +325,7 @@ SavageJansen_2018_intelligence_metaanalysis.txt <span class="op">&gt;</span> int
 --signed-sumstat Zscore,0 \
 --N-col N_analyzed \
 --out int</code></pre></div>
-<<<<<<< HEAD
 <p>The LDSC sumstats file is now also ready.</p>
-=======
-<p>The LDSC file is now ready for association with gene expression specificity.</p>
->>>>>>> ea5a3788b0585a60b4af9a4e04ec7b8d8c3d3d06
 </div>
 
 

@@ -63,7 +63,7 @@ rs12184277      1       715367  715367
 rs116801199     1       720381  720381
 ```
 
-These can be simply generated using awk scripts. However, sometimes the sumstats do not contain the position but only the rsid. In such case the following script can be used (**fast_match.py**). 
+These can be simply generated using awk scripts. However, sometimes the sumstats do not contain the position but only the rsid. In such case the following script can be used (**fast_match.py** in utils folder of this repository). 
 
 **fast_match.py** filters out any SNP that is not in the 1000 genomes data and gets the position based on SNP ID from the 1000 genomes file.
 
@@ -80,11 +80,11 @@ python ../../../../Code_Paper/utils/fast_match.py \
 
 ### Get annotation for MAGMA
 
-Now that the sumstats are ready, we can use MAGMA to generate an annotation file. 
+Now that the sumstats are in the right format, we can use MAGMA to generate an annotation file. 
 
 The following command maps all SNPs to gene using a window starting 35kb upstream and finishing 10kb downstream of each gene.
 
-The file NCBI37.3.gene.loc.extendedMHCexcluded is a filtered version of the MAGMA NCBI37.3.gene.loc file (removed extended MHC).
+The file NCBI37.3.gene.loc.extendedMHCexcluded is a filtered version of the MAGMA NCBI37.3.gene.loc auxiliary file (removed extended MHC).
 
 
 ```bash
@@ -107,11 +107,7 @@ magma --bfile ../../../../../../MAGMA/g1000_ceu_phase3/g1000_eur \
 
 The magma file is now ready for association with gene expression specificity.
 
-<<<<<<< HEAD
 # LDSC
-=======
-#LDSC
->>>>>>> ea5a3788b0585a60b4af9a4e04ec7b8d8c3d3d06
 
 LDSC needs to be downloaded and installed. See the following [link](https://github.com/bulik/ldsc/wiki)
 
@@ -127,8 +123,4 @@ munge_sumstats.py \
 --out int
 ```
 
-<<<<<<< HEAD
 The LDSC sumstats file is now also ready.
-=======
-The LDSC file is now ready for association with gene expression specificity.
->>>>>>> ea5a3788b0585a60b4af9a4e04ec7b8d8c3d3d06
