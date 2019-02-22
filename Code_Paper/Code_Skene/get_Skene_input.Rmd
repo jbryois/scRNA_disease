@@ -69,7 +69,7 @@ write_tsv(dic_lvl5,"../../Data/KI_lvl1/dictionary_cell_type_names.txt")
 
 # QC
 
-### Scale to 10k molecules
+### Scale to 1 million molecules
 
 Each cell type is scaled to the same total number of molecules. 
 
