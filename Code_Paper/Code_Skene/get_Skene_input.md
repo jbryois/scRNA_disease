@@ -1,10 +1,8 @@
 ---
 title: "Single Cell Data Set - Skene 2018"
-output: 
+output:
   html_document:
-    toc: true
-    toc_float: true
-    keep_md: true
+    keep_md: yes
 ---
 
 
@@ -28,12 +26,8 @@ Only keep genes with a unique name
 exp_lvl5 <- exp %>% add_count(Gene) %>% 
   filter(n==1) %>%
   select(-n) %>%
-  gather(key = Lvl5,value=Expr_sum_mean,-Gene) %>% as.tibble()
+  gather(key = Lvl5,value=Expr_sum_mean,-Gene) %>%
   as.tibble()
-```
-
-```
-## # A tibble: 0 x 0
 ```
 
 ### Load gene coordinates
@@ -78,7 +72,7 @@ write_tsv(dic_lvl5,"../../Data/KI_lvl1/dictionary_cell_type_names.txt")
 
 # QC
 
-### Scale to 10k molecules
+### Scale to 1 million molecules
 
 Each cell type is scaled to the same total number of molecules. 
 
