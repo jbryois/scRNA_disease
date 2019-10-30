@@ -67,6 +67,7 @@ These can be simply generated using awk scripts. However, sometimes the sumstats
 
 The g1000_eur.bim file is part of the MAGMA installation (see link above).
 
+(Note that the location of the bim file depends on where your MAGMA auxiliary files are on your system).
 
 ```bash
 python ../../../../utils/fast_match.py \

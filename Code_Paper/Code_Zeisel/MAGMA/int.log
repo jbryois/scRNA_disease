@@ -1,0 +1,26 @@
+Welcome to MAGMA v1.06b (mac)
+Using flags:
+	--gene-results ../../Data/GWAS/Intelligence/sumstats/int.annotated_35kbup_10_down.genes.raw
+	--set-annot ../MAGMA/top10.txt
+	--out int
+
+Start time is 15:46:07, Wednesday 30 Oct 2019
+
+Reading file ../../Data/GWAS/Intelligence/sumstats/int.annotated_35kbup_10_down.genes.raw... 
+	18812 genes read from file
+Loading gene-set annotation...
+Reading file ../MAGMA/top10.txt... 
+	39 gene-set definitions read from file
+	found 39 gene sets containing genes defined in genotype data (containing a total of 14038 unique genes)
+
+Starting gene-level analysis...
+	conditioning competitive gene-set analysis and gene covariate analysis on variables:	
+		genesize, log_genesize (internal)
+		genedensity, log_genedensity (internal)
+		samplesize, log_samplesize (internal)
+		inverse_mac, log_inverse_mac (internal)
+	writing gene-set analysis results to file int.sets.out
+	writing gene analysis results by gene set to file int.setgenes.out for significant gene sets (after multiple testing correction, at alpha = 0.05)
+
+
+End time is 15:46:19, Wednesday 30 Oct 2019 (elapsed: 00:00:12)
