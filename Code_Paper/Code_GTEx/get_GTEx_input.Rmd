@@ -1,8 +1,7 @@
 ---
 title: "Bulk RNA-seq Data Set - GTEx - v8"
 output: 
-  html_document:
-  keep_md: true
+  md_document
 ---
 
 # Load Data
