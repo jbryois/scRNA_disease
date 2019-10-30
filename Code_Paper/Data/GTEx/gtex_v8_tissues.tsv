@@ -1,0 +1,55 @@
+"SMTS"	"SMTSD"	"SMAFRZE"	"Nsample"	"drop"
+"Adipose Tissue"	"Adipose - Subcutaneous"	"RNASEQ"	663	FALSE
+"Adipose Tissue"	"Adipose - Visceral (Omentum)"	"RNASEQ"	541	FALSE
+"Adrenal Gland"	"Adrenal Gland"	"RNASEQ"	258	FALSE
+"Bladder"	"Bladder"	"RNASEQ"	21	TRUE
+"Blood"	"Cells - EBV-transformed lymphocytes"	"RNASEQ"	174	TRUE
+"Blood"	"Whole Blood"	"RNASEQ"	755	FALSE
+"Blood Vessel"	"Artery - Aorta"	"RNASEQ"	432	FALSE
+"Blood Vessel"	"Artery - Coronary"	"RNASEQ"	240	FALSE
+"Blood Vessel"	"Artery - Tibial"	"RNASEQ"	663	FALSE
+"Brain"	"Brain - Amygdala"	"RNASEQ"	152	FALSE
+"Brain"	"Brain - Anterior cingulate cortex (BA24)"	"RNASEQ"	176	FALSE
+"Brain"	"Brain - Caudate (basal ganglia)"	"RNASEQ"	246	FALSE
+"Brain"	"Brain - Cerebellar Hemisphere"	"RNASEQ"	215	FALSE
+"Brain"	"Brain - Cerebellum"	"RNASEQ"	241	FALSE
+"Brain"	"Brain - Cortex"	"RNASEQ"	255	FALSE
+"Brain"	"Brain - Frontal Cortex (BA9)"	"RNASEQ"	209	FALSE
+"Brain"	"Brain - Hippocampus"	"RNASEQ"	197	FALSE
+"Brain"	"Brain - Hypothalamus"	"RNASEQ"	202	FALSE
+"Brain"	"Brain - Nucleus accumbens (basal ganglia)"	"RNASEQ"	246	FALSE
+"Brain"	"Brain - Putamen (basal ganglia)"	"RNASEQ"	205	FALSE
+"Brain"	"Brain - Spinal cord (cervical c-1)"	"RNASEQ"	159	FALSE
+"Brain"	"Brain - Substantia nigra"	"RNASEQ"	139	FALSE
+"Breast"	"Breast - Mammary Tissue"	"RNASEQ"	459	FALSE
+"Cervix Uteri"	"Cervix - Ectocervix"	"RNASEQ"	9	TRUE
+"Cervix Uteri"	"Cervix - Endocervix"	"RNASEQ"	10	TRUE
+"Colon"	"Colon - Sigmoid"	"RNASEQ"	373	FALSE
+"Colon"	"Colon - Transverse"	"RNASEQ"	406	FALSE
+"Esophagus"	"Esophagus - Gastroesophageal Junction"	"RNASEQ"	375	FALSE
+"Esophagus"	"Esophagus - Mucosa"	"RNASEQ"	555	FALSE
+"Esophagus"	"Esophagus - Muscularis"	"RNASEQ"	515	FALSE
+"Fallopian Tube"	"Fallopian Tube"	"RNASEQ"	9	TRUE
+"Heart"	"Heart - Atrial Appendage"	"RNASEQ"	429	FALSE
+"Heart"	"Heart - Left Ventricle"	"RNASEQ"	432	FALSE
+"Kidney"	"Kidney - Cortex"	"RNASEQ"	85	TRUE
+"Kidney"	"Kidney - Medulla"	"RNASEQ"	4	TRUE
+"Liver"	"Liver"	"RNASEQ"	226	FALSE
+"Lung"	"Lung"	"RNASEQ"	578	FALSE
+"Muscle"	"Muscle - Skeletal"	"RNASEQ"	803	FALSE
+"Nerve"	"Nerve - Tibial"	"RNASEQ"	619	FALSE
+"Ovary"	"Ovary"	"RNASEQ"	180	FALSE
+"Pancreas"	"Pancreas"	"RNASEQ"	328	FALSE
+"Pituitary"	"Pituitary"	"RNASEQ"	283	FALSE
+"Prostate"	"Prostate"	"RNASEQ"	245	FALSE
+"Salivary Gland"	"Minor Salivary Gland"	"RNASEQ"	162	FALSE
+"Skin"	"Cells - Cultured fibroblasts"	"RNASEQ"	504	TRUE
+"Skin"	"Skin - Not Sun Exposed (Suprapubic)"	"RNASEQ"	604	FALSE
+"Skin"	"Skin - Sun Exposed (Lower leg)"	"RNASEQ"	701	FALSE
+"Small Intestine"	"Small Intestine - Terminal Ileum"	"RNASEQ"	187	FALSE
+"Spleen"	"Spleen"	"RNASEQ"	241	FALSE
+"Stomach"	"Stomach"	"RNASEQ"	359	FALSE
+"Testis"	"Testis"	"RNASEQ"	361	TRUE
+"Thyroid"	"Thyroid"	"RNASEQ"	653	FALSE
+"Uterus"	"Uterus"	"RNASEQ"	142	FALSE
+"Vagina"	"Vagina"	"RNASEQ"	156	FALSE
