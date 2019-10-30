@@ -1,8 +1,7 @@
 ---
 title: "Single Cell Data Set - Lake 2018"
 output: 
-  html_document:
-  keep_md: true
+  md_document
 ---
 
 # Load Data
