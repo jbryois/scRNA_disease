@@ -42,6 +42,8 @@ The following links show the essential steps:
 
 6) [Get MAGMA and LDSC input for the Saunders et al. data set](Code_Paper/Code_Saunders/get_Saunders_input.md)
 
+7) [Get MAGMA and LDSC input for the Lake et al. data set](Code_Paper/Code_Lake/get_Lake_input.md)
+
 # Run MAGMA
 
 Once the GWAS sumstats are ready and the specificity files are ready, you can use the following [code](Code_Paper/Code_Zeisel/run_MAGMA.md) to test for associations using MAGMA (Zeisel data set in this example).
