@@ -46,9 +46,9 @@ The following links show the essential steps:
 
 # Run MAGMA
 
-Once the GWAS sumstats are ready and the specificity files are ready, you can use the following [code](Code_Paper/Code_Zeisel/run_MAGMA.md) to test for associations using MAGMA (Zeisel data set in this example).
+Once the GWAS sumstats are ready and the specificity files are ready, you can use the following [code](Code_Paper/Code_Zeisel/run_MAGMA.md) to test for associations using MAGMA.
 
-If you want to run your GWAS with our specificity files, you just need to get the 'Lvl5_spe_norm_no_filter.txt' files in the different MAGMA folders [here](https://www.dropbox.com/s/h2v5ebs2hxghrx0/Code_Paper_specificity.zip?dl=0).
+If you want to run your GWAS with our specificity files, you just need to get the 'top10.txt' files in the different MAGMA folders.
 
 # Run LDSC
 
