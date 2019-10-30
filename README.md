@@ -1,4 +1,6 @@
-# Integrating genetics with single cell RNA-seq
+# Integrating GWAS with single cell RNA-seq
+
+Last update: 30.10.2019
 
 The paper is currently on bioRxiv and can be accessed [here](https://www.biorxiv.org/content/10.1101/528463v1).
 
@@ -18,7 +20,7 @@ install.packages("org.Hs.eg.db")
 
 # Specificity files
 
-You can download the gene expression specificity files for the different datasets used [here](https://www.dropbox.com/s/h2v5ebs2hxghrx0/Code_Paper_specificity.zip?dl=0).
+You can download the gene expression specificity files for the different datasets used [here]().
 
 By following step [1)](Code_Paper/Code_GWAS/get_GWAS_input.md) on your GWAS, you should then be able to run quickly the MAGMA association [code](Code_Paper/Code_Zeisel/run_MAGMA.md) and the LDSC [code](Code_Paper/LDSC_pipeline/README.md).
 
@@ -30,7 +32,7 @@ The following links show the essential steps:
 
 1) [Get GWAS summary statistics in the right format for MAGMA and LDSC](Code_Paper/Code_GWAS/get_GWAS_input.md)
 
-2) [Get MAGMA and LDSC input for the Zeisel et al. data set](Code_Paper/Code_Zeisel/get_Zeisel_input.md)
+2) [Get MAGMA and LDSC input for the Zeisel et al. data set](Code_Paper/Code_Zeisel/get_Zeisel_Lvl4_input.md)
 
 3) [Get MAGMA and LDSC input for the GTEx et al. data set](Code_Paper/Code_GTEx/get_GTEx_input.md)
 
