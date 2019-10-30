@@ -20,8 +20,6 @@ install.packages("org.Hs.eg.db")
 
 # Specificity files
 
-You can download the gene expression specificity files for the different datasets used [here]().
-
 By following step [1)](Code_Paper/Code_GWAS/get_GWAS_input.md) on your GWAS, you should then be able to run quickly the MAGMA association [code](Code_Paper/Code_Zeisel/run_MAGMA.md) and the LDSC [code](Code_Paper/LDSC_pipeline/README.md).
 
 # Steps
