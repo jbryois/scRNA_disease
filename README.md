@@ -10,8 +10,6 @@ The paper is currently on bioRxiv and can be accessed [here](https://www.biorxiv
 install.packages("tidyverse")
 install.packages("AnnotationDbi")
 install.packages("org.Hs.eg.db")
-install.packages("GenABEL")
-install.packages("stringr")
 ```
 
 2. [MAGMA](https://ctg.cncr.nl/software/magma) and its auxiliary files
