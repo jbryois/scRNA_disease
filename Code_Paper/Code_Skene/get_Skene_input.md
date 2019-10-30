@@ -16,16 +16,14 @@ output:
 library(tidyverse)
 f <- "../../Data/KI_lvl1/celltype_data_allKImouse_wtHypo_MergedStriatal_1to1only_level1_thresh0_trim0.rda"
 load(f)
-exp <- as.data.frame(celltype_data[[1]]$all_sct) %>% rownames_to_column("Gene")
+exp_lvl5 <- as.data.frame(celltype_data[[1]]$all_sct) %>% rownames_to_column("Gene")
 ```
 
 Only keep genes with a unique name
 
 
 ```r
-exp_lvl5 <- exp %>% add_count(Gene) %>% 
-  filter(n==1) %>%
-  select(-n) %>%
+exp_lvl5 <- exp_lvl5 %>% 
   gather(key = Lvl5,value=Expr_sum_mean,-Gene) %>%
   as.tibble()
 ```
@@ -90,31 +88,66 @@ The specifitiy is defined as the proportion of total expression performed by the
 
 ```r
 exp_lvl5 <- exp_lvl5 %>% group_by(Gene) %>% 
-  mutate(specificity=Expr_sum_mean/sum(Expr_sum_mean),
-         max=max(Expr_sum_mean))
+  mutate(specificity=Expr_sum_mean/sum(Expr_sum_mean))
 ```
 
-### Get 1to1 orthologs and Normalise
+### Get 1to1 orthologs 
 
-Get 1to1 orthologs, standard normalized specificity within cell type.
+Only keep genes with a 1to1 orthologs
 
 
 ```r
-exp_lvl5 <- inner_join(exp_lvl5,m2h,by="Gene") %>% group_by(Lvl5) %>%
-    mutate(spe_norm=GenABEL::rntransform(specificity))
+exp_lvl5 <- inner_join(exp_lvl5,m2h,by="Gene")
+```
+
+### Only keep MAGMA genes 
+
+Only keep protein coding genes present in the MAGMA gene file.
+
+
+```r
+exp_lvl5 <- inner_join(exp_lvl5,gene_coordinates)
+```
+
+### Get number of genes
+
+Get number of genes that represent 10% of the dataset
+
+
+```r
+n_genes <- length(unique(exp_lvl5$ENTREZ))
+n_genes_to_keep <- (n_genes * 0.1) %>% round()
+```
+
+# Save expression profile for other processing
+
+
+```r
+save(exp_lvl5,file = "expression.ready.Rdata")
 ```
 
 ### Functions
 
-#### Get MAGMA input continuous
+#### Get MAGMA input top10%
 
 
 ```r
-magma_input <- function(d,Cell_type,spec, outputfile_name){
- d_spe <- d %>% select(ENTREZ,Cell_type,spec) %>% spread(key=Cell_type,value=spec)
- colnames(d_spe) <- make.names(colnames(d_spe))
- dir.create("MAGMA_Skene", showWarnings = FALSE)
- write_tsv(d_spe,paste0("MAGMA_Skene/",Cell_type,"_",spec,"_",outputfile_name,".txt"))
+magma_top10 <- function(d,Cell_type){
+  d_spe <- d %>% group_by_(Cell_type) %>% top_n(.,n_genes_to_keep,specificity) 
+  d_spe %>% do(write_group_magma(.,Cell_type))
+}
+```
+
+
+```r
+write_group_magma  = function(df,Cell_type) {
+  df <- select(df,Lvl5,ENTREZ)
+  df_name <- make.names(unique(df[1]))
+  colnames(df)[2] <- df_name  
+  dir.create(paste0("MAGMA/"), showWarnings = FALSE)
+  select(df,2) %>% t() %>% as.data.frame() %>% rownames_to_column("Cat") %>%
+  write_tsv("MAGMA/top10.txt",append=T)
+return(df)
 }
 ```
 
@@ -122,34 +155,41 @@ magma_input <- function(d,Cell_type,spec, outputfile_name){
 
 
 ```r
-write_group  = function(df,Cell_type,outputfile_name) {
+write_group  = function(df,Cell_type) {
   df <- select(df,Lvl5,chr,start,end,ENTREZ)
-  dir.create(paste0("LDSC_Skene/Bed_4LDSC2_",outputfile_name), showWarnings = FALSE,recursive = TRUE)
-  write_tsv(df[-1],paste0("LDSC_Skene/Bed_4LDSC2_",outputfile_name,"/",make.names(unique(df[1])),".bed"),col_names = F)
+  dir.create(paste0("LDSC/Bed"), showWarnings = FALSE,recursive = TRUE)
+  write_tsv(df[-1],paste0("LDSC/Bed/",make.names(unique(df[1])),".bed"),col_names = F)
 return(df)
 }
 ```
 
 
 ```r
-ldsc_bedfile <- function(d,Cell_type, outputfile_name){
-  d_spe <- d %>% inner_join(gene_coordinates,by="ENTREZ") %>% group_by_(Cell_type) %>% filter(specificity>=quantile(specificity,0.9)) 
-  d_spe %>% do(write_group(.,Cell_type,outputfile_name))
+ldsc_bedfile <- function(d,Cell_type){
+  d_spe <- d %>% group_by_(Cell_type) %>% top_n(.,n_genes_to_keep,specificity) 
+  d_spe %>% do(write_group(.,Cell_type))
 }
 ```
 
 ### Write MAGMA/LDSC input files 
 
-Keep all genes for continuous analysis.
+Filter out genes with expression below 1.
 
 
 ```r
-magma_input(exp_lvl5,"Lvl5","spe_norm","no_filter")
+exp_lvl5 %>% filter(Expr_sum_mean>1) %>% magma_top10("Lvl5")
 ```
 
-Filter genes with expression below 1 in the top cell type (scaled to 1M molecules) and take top 10% most specific genes.
+```
+## Warning: group_by_() is deprecated. 
+## Please use group_by() instead
+## 
+## The 'programming' vignette or the tidyeval book can help you
+## to program with group_by() : https://tidyeval.tidyverse.org
+## This warning is displayed once per session.
+```
 
 
 ```r
-exp_lvl5 %>% filter(max>1) %>% ldsc_bedfile("Lvl5","exp_gt_0.1")
+exp_lvl5 %>% filter(Expr_sum_mean>1) %>% ldsc_bedfile("Lvl5")
 ```
