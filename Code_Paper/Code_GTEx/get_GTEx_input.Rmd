@@ -1,5 +1,5 @@
 ---
-title: "Bulk RNA-seq Data Set - GTEx 2017"
+title: "Bulk RNA-seq Data Set - GTEx - v8"
 output: 
   html_document:
   keep_md: true
@@ -15,11 +15,45 @@ library(tidyverse)
 
 ### Load GTEx dataset
 
-The GTEx data was downloaded from [here](https://gtexportal.org)
+The GTEx data (Version 8) was downloaded from [here](https://gtexportal.org)
 
 ```{r,message=FALSE}
-file="../../Data/GTEx/GTEx_Analysis_2016-01-15_v7_RNASeQCv1.1.8_gene_median_tpm.gct"
-exp <- read_tsv(file,skip=2)
+file="../../Data/GTEx/GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_median_tpm.gct"
+exp <- read_tsv(file,skip=2) %>% rename(gene_id=Name)
+```
+
+### Collapse expression per tissue
+
+The gtex_v8_tissues.tsv contains the tissues to keep (N>100), as well as info about which organ each tissue belongs to. We want to keep the different Brain tissues and not collapsed at the organ level for the Brain. So we add the different Brain tissues to the organ level column.
+
+```{r}
+tissues <- read_tsv("../../Data/GTEx/v8/gtex_v8_tissues.tsv") %>% 
+  rename(Lvl5=SMTSD,Tissue=SMTS) %>% 
+  mutate(Tissue2=ifelse(grepl("Brain",Tissue),Lvl5,Tissue)) %>% 
+  select(-Tissue) %>% 
+  rename(Tissue=Tissue2)
+```
+
+We tidy the GTEx gene expression data and join with the tissue information file
+
+```{r}
+exp <- gather(exp,key = Lvl5,value=Expr,-gene_id,-Description) %>% as.tibble()
+exp <- inner_join(exp,tissues)
+```
+
+We then drop tissues with less than 100 samples, testis (gene expression outlier), non natural tissues (e.g. EBV-transformed lymphocytes) and then take the average expression for the different tissues that belong to the same organ.
+
+```{r}
+exp_per_tissue <- exp %>% 
+  filter(drop==FALSE) %>% 
+  group_by(Tissue,gene_id,Description) %>% 
+  summarise(Expr=mean(Expr))
+```
+
+Tidy the data
+
+```{r}
+exp <- exp_per_tissue %>% spread(Tissue,Expr) %>% ungroup()
 ```
 
 ### Scale to 1M TPM
@@ -50,7 +84,7 @@ Filtered to remove extended MHC (chr6, 25Mb to 34Mb).
 
 ```{R, load coordinates,message=F}
 gene_coordinates <- 
-  read_tsv("../Data/NCBI/NCBI37.3.gene.loc.extendedMHCexcluded",
+  read_tsv("../../Data/NCBI/NCBI37.3.gene.loc.extendedMHCexcluded",
            col_names = FALSE,col_types = 'cciicc') %>%
   mutate(start=ifelse(X3-100000<0,0,X3-100000),end=X4+100000) %>%
   select(X2,start,end,1) %>% 
@@ -93,7 +127,7 @@ exp_lvl5 <- inner_join(exp_lvl5,gene_coordinates)
 
 ```{R, write dictionnary,message=F}
 dic_lvl5 <- exp_lvl5 %>% select(Lvl5) %>% unique() %>% mutate(makenames=make.names(Lvl5))
-write_tsv(dic_lvl5,"../Data/GTEx/dictionary_cell_type_names.txt")
+write_tsv(dic_lvl5,"../../Data/GTEx/dictionary_cell_type_names.collapsed.txt")
 ```
 
 # QC
@@ -116,54 +150,73 @@ The specifitiy is defined as the proportion of total expression performed by the
 
 ```{R, specificity 5,message=F}
 exp_lvl5 <- exp_lvl5 %>% group_by(Gene) %>% 
-  mutate(specificity=Expr_sum_mean/sum(Expr_sum_mean),
-         max=max(Expr_sum_mean))
+  mutate(specificity=Expr_sum_mean/sum(Expr_sum_mean)) %>% ungroup()
+```
 
-exp_lvl5 <- exp_lvl5 %>% group_by(Lvl5) %>%
-    mutate(spe_norm=GenABEL::rntransform(specificity))
+### Get number of genes
+
+Get number of genes that represent 10% of the dataset
+
+```{r}
+n_genes <- length(unique(exp_lvl5$ENTREZ))
+n_genes_to_keep <- (n_genes * 0.1) %>% round()
+```
+
+# Save expression profile for other processing
+
+```{r}
+save(exp_lvl5,file = "expression.ready.Rdata")
 ```
 
 ### Functions
 
-#### Get MAGMA input continuous
+#### Get MAGMA input top10%
 
-```{R, Functions 3,message=F}
-magma_input <- function(d,Cell_type,spec, outputfile_name){
- d_spe <- d %>% select(ENTREZ,Cell_type,spec) %>% spread(key=Cell_type,value=spec)
- colnames(d_spe) <- make.names(colnames(d_spe))
- dir.create("MAGMA_GTEx/", showWarnings = FALSE)
- write_tsv(d_spe,paste0("MAGMA_GTEx/",Cell_type,"_",spec,"_",outputfile_name,".txt"))
+```{R, Functions 6,message=F}
+magma_top10 <- function(d,Cell_type){
+  d_spe <- d %>% group_by_(Cell_type) %>% top_n(.,n_genes_to_keep,specificity) 
+  d_spe %>% do(write_group_magma(.,Cell_type))
+}
+```
+
+```{R, write_function1}
+write_group_magma  = function(df,Cell_type) {
+  df <- select(df,Lvl5,ENTREZ)
+  df_name <- make.names(unique(df[1]))
+  colnames(df)[2] <- df_name  
+  dir.create(paste0("MAGMA/"), showWarnings = FALSE)
+  select(df,2) %>% t() %>% as.data.frame() %>% rownames_to_column("Cat") %>%
+  write_tsv("MAGMA/top10.txt",append=T)
+return(df)
 }
 ```
 
 #### Get LDSC input top 10%
 
 ```{R, write_function}
-write_group  = function(df,Cell_type,outputfile_name) {
+write_group  = function(df,Cell_type) {
   df <- select(df,Lvl5,chr,start,end,ENTREZ)
-  dir.create(paste0("LDSC_GTEx/Bed_4LDSC2_",outputfile_name), showWarnings = FALSE,recursive = TRUE)
-  write_tsv(df[-1],paste0("LDSC_GTEx/Bed_4LDSC2_",outputfile_name,"/",make.names(unique(df[1])),".bed"),col_names = F)
+  dir.create(paste0("LDSC/Bed"), showWarnings = FALSE,recursive = TRUE)
+  write_tsv(df[-1],paste0("LDSC/Bed/",make.names(unique(df[1])),".bed"),col_names = F)
 return(df)
 }
 ```
 
 ```{R, Functions 23,message=F}
-ldsc_bedfile <- function(d,Cell_type, outputfile_name){
-  d_spe <- d %>% group_by_(Cell_type) %>% filter(specificity>=quantile(specificity,0.9)) 
-  d_spe %>% do(write_group(.,Cell_type,outputfile_name))
+ldsc_bedfile <- function(d,Cell_type){
+  d_spe <- d %>% group_by_(Cell_type) %>% top_n(.,n_genes_to_keep,specificity) 
+  d_spe %>% do(write_group(.,Cell_type))
 }
 ```
 
 ### Write MAGMA/LDSC input files 
 
-Keep all genes for continuous analysis.
+Filter out genes with expression below 1 TPM.
 
-```{R, plot10112,message=F}
-magma_input(exp_lvl5,"Lvl5","spe_norm","no_filter")
+```{R, magma input21211223123,message=F, results='hide'}
+exp_lvl5 %>% filter(Expr_sum_mean>1) %>% magma_top10("Lvl5")
 ```
 
-Filter out low expressed genes (<1 TPM) and get the 10% most specific genes.
-
 ```{R, ldsc22223123,message=F, results='hide'}
-exp_lvl5 %>% filter(max>1) %>% ldsc_bedfile("Lvl5","exp_gt_0.1")
+exp_lvl5 %>% filter(Expr_sum_mean>1) %>% ldsc_bedfile("Lvl5")
 ```
