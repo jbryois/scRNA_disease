@@ -1,6 +1,6 @@
 # Integrating GWAS with single cell RNA-seq
 
-Last update: 30.10.2019
+Last update: 24.4.2020
 
 The paper is currently on bioRxiv and can be accessed [here](https://www.biorxiv.org/content/10.1101/528463v1).
 
