@@ -119,13 +119,6 @@ n_genes <- length(unique(exp_lvl5$ENTREZ))
 n_genes_to_keep <- (n_genes * 0.1) %>% round()
 ```
 
-# Save expression profile for other processing
-
-
-```r
-save(exp_lvl5,file = "expression.ready.Rdata")
-```
-
 ### Functions
 
 #### Get MAGMA input top10%
@@ -173,20 +166,11 @@ ldsc_bedfile <- function(d,Cell_type){
 
 ### Write MAGMA/LDSC input files 
 
-Filter out genes with expression below 1.
+Filter out genes with expression below 1 TPM.
 
 
 ```r
 exp_lvl5 %>% filter(Expr_sum_mean>1) %>% magma_top10("Lvl5")
-```
-
-```
-## Warning: group_by_() is deprecated. 
-## Please use group_by() instead
-## 
-## The 'programming' vignette or the tidyeval book can help you
-## to program with group_by() : https://tidyeval.tidyverse.org
-## This warning is displayed once per session.
 ```
 
 
