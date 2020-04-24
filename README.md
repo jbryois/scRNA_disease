@@ -52,6 +52,8 @@ If you want to run your GWAS with our specificity files, you just need to get th
 
 Once the GWAS sumstats are ready and the specificity files are ready, you can use the following [code](Code_Paper/LDSC_pipeline/README.md) to test for associations using LDSC.
 
+Alternatively, you could use a nextflow pipeline located [here](https://github.com/jbryois/LDSC_nf)
+
 The code to look for heritability enrichment of the top 10% most specific genes was made to be run in parallele on a SLURM cluster. It would need to be adapted if you want to run it locally.
 
 # Expression Weighted Celltype Enrichment
