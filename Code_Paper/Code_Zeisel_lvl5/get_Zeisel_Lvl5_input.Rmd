@@ -1,8 +1,8 @@
 ---
 title: "Single Cell Data Set - Zeisel 2018"
 output: 
-  md_document:
-  keep_md: yes
+  html_document:
+  keep_md: true
 ---
 
 # Load Data
@@ -88,8 +88,8 @@ exp_lvl5 <- inner_join(exp,cell_types,by="column") %>% ungroup() %>% rename(Expr
 Used to have nice labels in plotting
 
 ```{R, write dictionnary,message=F}
-dic_lvl5 <- select(cell_types,-column,-NCells) %>% select(Lvl1:Lvl4) %>% unique() %>% mutate(Lvl4_MAGMA_names=make.names(Lvl4)) 
-write_tsv(dic_lvl5,"../../Data/Sten Whole Brain 10xGenomics 2018/dictionary_cell_type_names.Lvl4.txt")
+dic_lvl5 <- select(cell_types,-column,-NCells)
+write_tsv(dic_lvl5,"../../Data/Sten Whole Brain 10xGenomics 2018/dictionary_cell_type_names.Lvl5.txt")
 ```
 
 ### Remove not expressed genes
@@ -110,7 +110,7 @@ Each cell type is scaled to the same total number of molecules.
 
 ```{R, rm lowQ 34,message=F}
 exp_lvl5 <- exp_lvl5 %>% 
-  group_by(Lvl4) %>% 
+  group_by(Lvl5) %>% 
   mutate(Expr_sum_mean=Expr_sum_mean*1e6/sum(Expr_sum_mean))
 ```
 
@@ -171,7 +171,7 @@ magma_top10 <- function(d,Cell_type){
 
 ```{R, write_function1}
 write_group_magma  = function(df,Cell_type) {
-  df <- select(df,Lvl4,ENTREZ)
+  df <- select(df,Lvl5,ENTREZ)
   df_name <- make.names(unique(df[1]))
   colnames(df)[2] <- df_name  
   dir.create(paste0("MAGMA/"), showWarnings = FALSE)
@@ -185,7 +185,7 @@ return(df)
 
 ```{R, write_function}
 write_group  = function(df,Cell_type) {
-  df <- select(df,Lvl4,chr,start,end,ENTREZ)
+  df <- select(df,Lvl5,chr,start,end,ENTREZ)
   dir.create(paste0("LDSC/Bed"), showWarnings = FALSE,recursive = TRUE)
   write_tsv(df[-1],paste0("LDSC/Bed/",make.names(unique(df[1])),".bed"),col_names = F)
 return(df)
